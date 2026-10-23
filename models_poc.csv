@@ -1,0 +1,3 @@
+model_id,service,temperature,notes
+gpt-4o-mini,openai,1.0,"Placeholder: replace with the two models the team picks; confirm names with Model.available()"
+claude-3-5-haiku-20241022,anthropic,1.0,"Placeholder: replace with the two models the team picks; confirm names with Model.available()"

@@ -1,0 +1,3 @@
+edsl==1.0.9
+pandas
+tabulate

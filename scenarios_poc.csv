@@ -1,0 +1,4 @@
+scenario_id,company,industry,holding_period,abs_return_pct
+s01,Brightwater Logistics,freight and shipping,8 months,5
+s02,Halvorsen Biotech,biotechnology,14 months,10
+s03,Quillfeather Software,business software,2 years,20
