@@ -1,5 +1,5 @@
-   .env
-   *.env
-   __pycache__/
-   .DS_Store
-   outputs/poc_TEST_*
+.env
+*.env
+__pycache__/
+.DS_Store
+outputs/poc_TEST_*
