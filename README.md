@@ -8,6 +8,8 @@ We study investors inspired by the emotions in *Inside Out*: **Joy, Sadness, Ang
 
 **Status:** experimental design and pipeline plan. This README does not report experimental results. Model choices, exact prompts, budget, and analysis specifications must be frozen and timestamped before the main run. If any pilot responses have already been examined, disclose them and label subsequent predictions accordingly.
 
+**Checkpoint 1 update (October 24, 2026):** pilot collection and analysis scripts are implemented and have passed a synthetic dry run. GPT-5.6 Luna and Claude Haiku 5.5 are selected for the paid pilot; credentials and live availability still need verification. See [POC_README.md](POC_README.md), [MODEL_SELECTION.md](MODEL_SELECTION.md), and [STATUS_checkpoint1.md](STATUS_checkpoint1.md). The larger study described below remains planned.
+
 ## Why this question matters
 
 A fintech designing investor nudges could use evidence about how simulated emotions affect sell/hold decisions. Researchers could use it to assess whether LLM “silicon subjects” reproduce a documented human pattern. Agreement with a human benchmark would not, by itself, establish that LLMs behave like real investors.

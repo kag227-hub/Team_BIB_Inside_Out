@@ -1,0 +1,25 @@
+{
+  "is_synthetic": true,
+  "run_id": "poc_TEST_validated",
+  "observations": 54,
+  "valid_decisions": 54,
+  "valid_ratings": 54,
+  "complete_pairs": 27,
+  "paid_spend_usd": 0,
+  "python": "3.13",
+  "edsl": "1.0.9",
+  "pandas": "3.0.6",
+  "tabulate": "0.10.0",
+  "hand_check": {
+    "persona_id": "embarrassment_mid_desc",
+    "scenario_id": "s01",
+    "gain_sell": 0,
+    "loss_sell": 0,
+    "rating": 4,
+    "gain_minus_loss": 0
+  },
+  "limitations": [
+    "fixed hold/4 test answers; no behavioral inference",
+    "live model/account availability unverified"
+  ]
+}

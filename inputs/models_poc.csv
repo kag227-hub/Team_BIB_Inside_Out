@@ -1,3 +1,3 @@
-model_id,service,temperature,notes
-gpt-4o-mini,openai,1.0,"Placeholder: replace with the two models the team picks; confirm names with Model.available()"
-claude-3-5-haiku-20241022,anthropic,1.0,"Placeholder: replace with the two models the team picks; confirm names with Model.available()"
+model_id,service,temperature,max_tokens,reasoning_effort,input_usd_per_million,output_usd_per_million,price_checked,price_source,notes
+gpt-5.6-luna,openai,1.0,2048,low,0.20,1.20,2026-10-23,https://developers.openai.com/api/docs/models/gpt-5.6-luna,"Selected cost-sensitive OpenAI model; verify Expected Parrot availability before paid collection"
+claude-haiku-5-5,anthropic,,2048,low,0.10,0.50,2026-10-23,https://platform.claude.com/docs/en/models/haiku-5-5/overview,"Selected cost-sensitive Anthropic model; omit sampling parameters; short-context rates; verify Expected Parrot availability"
