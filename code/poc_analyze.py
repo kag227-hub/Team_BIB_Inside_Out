@@ -117,7 +117,9 @@ lines += ["## 5. Cost (actual) and projection to the full design", "", proj.to_m
           "Missing cost metadata remains unknown; provider/Expected Parrot billing must be reconciled separately.", ""]
 
 # 6. Hand check: one matched pair, laid out for a teammate to verify against the prompts file
-hc = df.sort_values(key).head(2)[["persona_id", "scenario_id", "version", "model_id",
+hc_pool = v if len(v) else df
+first_pair = hc_pool.sort_values(pair_key).iloc[0][pair_key]
+hc = df[df[pair_key].eq(first_pair).all(axis=1)].sort_values("version")[["persona_id", "scenario_id", "version", "model_id",
                                   "decision_raw", "sell", "sell_rating_raw", "sell_rating", "obs_cost_usd"]]
 lines += ["## 6. Hand-check pair (verify against *_prompts.csv and the raw results)", "",
           hc.to_markdown(index=False), ""]

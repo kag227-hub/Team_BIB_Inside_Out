@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class AnalysisChecks(unittest.TestCase):
-    def run_analysis(self, is_test=False, include_cost=True):
+    def run_analysis(self, is_test=False, include_cost=True, two_models=False):
         (ROOT / "outputs").mkdir(exist_ok=True)
         temp = tempfile.TemporaryDirectory(dir=ROOT / "outputs")
         assert (ROOT / "outputs").resolve() in Path(temp.name).resolve().parents
@@ -30,6 +30,8 @@ class AnalysisChecks(unittest.TestCase):
                     row["raw_model_response__decision_cost"] = 0.01
                     row["cache_used__decision_cache_used"] = True
                 rows.append(row)
+        if two_models:
+            rows += [dict(row, model_id="second_model") for row in list(rows)]
         path = out / "fixture_responses.csv"
         pd.DataFrame(rows).to_csv(path, index=False)
         # No input manifest: test the explicitly observed two-pair fixture.
@@ -61,6 +63,13 @@ class AnalysisChecks(unittest.TestCase):
         self.assertEqual(costs.total_cost_usd.iloc[0], 0)
         self.assertTrue(pd.isna(costs.proj_full_36000_usd.iloc[0]))
         self.assertIn("SYNTHETIC", report)
+
+    def test_handcheck_is_a_pair_from_one_model(self):
+        _, _, report = self.run_analysis(two_models=True)
+        handcheck = report.split("## 6. Hand-check pair", 1)[1]
+        self.assertIn("gain", handcheck)
+        self.assertIn("loss", handcheck)
+        self.assertNotIn("second_model", handcheck)
 
 
 if __name__ == "__main__":
