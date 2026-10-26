@@ -1,0 +1,3 @@
+model_id,price_source,price_checked,observations,requests,assumed_input_tokens_per_request,assumed_output_tokens_per_request,estimated_usd
+gpt-5.6-luna,https://developers.openai.com/api/docs/models/gpt-5.6-luna,2026-10-23,54,108,2000,500,0.108
+claude-haiku-5-5,https://platform.claude.com/docs/en/models/haiku-5-5/overview,2026-10-23,54,108,2000,500,0.0486

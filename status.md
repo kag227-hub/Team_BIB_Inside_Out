@@ -1,7 +1,9 @@
 # Project Status: “Inside Out” Silicon Investors
 
 **Team BIB · FIN 331 · Project seed #13**  
-**Last updated: October 15, 2026**
+**Last updated: October 24, 2026**
+
+**Checkpoint update:** the pilot tables and EDSL scripts now exist, and a corrected synthetic dry run passed with 54 observations and 27 complete pairs. GPT-5.6 Luna and Claude Haiku 5.5 are selected for the paid pilot. No paid results have been collected; the existing Expected Parrot setup must still be located. See [STATUS_checkpoint1.md](STATUS_checkpoint1.md) for executed evidence and [POC_README.md](POC_README.md) for the run procedure.
 
 ## Why we chose this project
 
@@ -68,22 +70,22 @@ This status reflects the materials currently in this repository.
 | Select project seed #13 and Inside Out theme | Complete |
 | Document the research question, proposed predictions, and experimental design | Complete in the README |
 | Outline the EDSL pipeline, dataset contract, and audit requirements | Complete as a plan |
-| Build persona/scenario tables and finalize prompt wording | Planned |
-| Select exact models, estimate costs, and set a spending cap | Pending |
-| Implement and validate survey collection and offline analysis | Planned |
+| Build persona/scenario tables and finalize prompt wording | Pilot tables implemented; main-study tables pending |
+| Select exact models, estimate costs, and set a spending cap | Two models selected; planning estimate documented; account estimate and budget review pending |
+| Implement and validate survey collection and offline analysis | Pilot scripts implemented; synthetic validation passed; live validation pending |
 | Run a labeled pilot and log any design changes | Pending |
 | Freeze and timestamp the main-run specifications | Pending |
 | Collect main-run responses and analyze results | Pending |
 | Build and verify the dashboard | Planned |
 
-**No experimental findings are reported in the repository at this stage.** The pipeline and dashboard described in the README remain planned deliverables.
+**No experimental findings are reported in the repository at this stage.** A pilot pipeline has been tested with synthetic answers; the full study and dashboard remain planned.
 
 ## Immediate next steps
 
-1. Write the persona and scenario tables, including the neutral control and matched gain/loss prompts.
-2. Select the two models and estimate the cost of the actual survey implementation.
-3. Implement design checks, response storage, and analysis; validate them with clearly labeled synthetic examples.
-4. Run a small, labeled pilot to check formatting, parsing, and cost. Log all attempted specifications and changes in `specs_tried.md`.
-5. Freeze the main design and predictions before collecting main-run responses.
+1. Locate the existing Expected Parrot setup and verify account access to both selected models.
+2. Review the account-based estimate and budget, then run the paid pilot.
+3. Inspect raw responses and billing, update STATUS_checkpoint1.md with measured results, and add the artifacts to the draft PR.
+4. Expand the pilot tables to the main design and log all changes in `specs_tried.md`.
+5. Freeze the main-study design and predictions before collecting main-run responses.
 
 The full design, outcome definitions, budget calculations, and threats to validity are documented in [README.md](README.md).
