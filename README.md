@@ -1,5 +1,7 @@
 # Team BIB: “Inside Out” Silicon Investors
 
+**📊 Live dashboard: _TODO — paste the Streamlit Community Cloud URL here after deploying (see "Dashboard" below)_**
+
 **FIN 331 final project · Project seed #13 · Python + EDSL**
 
 Do LLM investor personas show the **disposition effect**—a greater tendency to sell investments with gains than investments with losses—and does that tendency depend on emotion or model?
@@ -9,6 +11,29 @@ We study investors inspired by the emotions in *Inside Out*: **Joy, Sadness, Ang
 **Status:** experimental design and pipeline plan. This README does not report experimental results. Model choices, exact prompts, budget, and analysis specifications must be frozen and timestamped before the main run. If any pilot responses have already been examined, disclose them and label subsequent predictions accordingly.
 
 **Checkpoint 1 update (October 24, 2026):** pilot collection and analysis scripts are implemented and have passed a synthetic dry run. GPT-5.6 Luna and Claude Haiku 5.5 are selected for the paid pilot; credentials and live availability still need verification. See [POC_README.md](POC_README.md), [MODEL_SELECTION.md](MODEL_SELECTION.md), and [STATUS_checkpoint1.md](STATUS_checkpoint1.md). The larger study described below remains planned.
+
+## How to run (Checkpoint 2 · v0)
+
+```bash
+python -m pip install -r requirements.txt
+python run_all.py                      # rebuilds every output from data/raw/, no API calls
+python -m unittest discover -s tests   # offline checks
+streamlit run dashboard/app.py         # dashboard, reads outputs/ only
+```
+
+| Step | File | Reads → writes |
+|---|---|---|
+| 1. Collect (paid, deliberate; not run by `run_all.py`) | `code/poc_run.py` | `inputs/*_poc.csv` → `data/raw/<run_id>/` (raw EDSL results, prompts, manifest) |
+| 2. Build dataset | `code/build_dataset.py` | `data/raw/<run_id>/raw_results.csv` → `outputs/<run_id>_responses.csv` |
+| 3. Analyze | `code/poc_analyze.py` | → `*_feasibility.md`, `*_rates.csv`, `*_cost_projection.csv` |
+| 4. Table + figure | `code/make_figures.py` | → `*_summary_table.csv/.md`, `*_disposition_by_persona.png` |
+| 5. Dashboard | `dashboard/app.py` | `outputs/` + `data/raw/<run_id>/prompts.csv` |
+
+**Data.** `data/raw/poc_TEST_v0/` is a free synthetic run (EDSL's test model answers "hold / 4" to everything), so its effects are zero by construction. It proves the plumbing only. **To load the paid pilot,** copy that run's files from Colab or Expected Parrot into `data/raw/poc_paid_20261025T012651Z/` as `raw_results.csv`, `raw_results.ep`, `prompts.csv` and `manifest.json`. Check them for credentials, then run `python run_all.py`. The dashboard shows a paid run by default whenever one exists.
+
+**Dashboard.** Deploy on [Streamlit Community Cloud](https://share.streamlit.io): New app → this repo → branch `main` → main file `dashboard/app.py` (it installs `dashboard/requirements.txt`). Paste the URL at the top of this README.
+
+**Self-audit:** [audits/01_self_audit.md](audits/01_self_audit.md).
 
 ## Why this question matters
 
@@ -85,7 +110,7 @@ Odean uses realized and paper opportunities in brokerage records; we use prompte
 
 ## Planned EDSL pipeline
 
-**The files below are proposed deliverables, not files already implemented.** Pin the EDSL version and verify its survey, cache, and model interfaces during implementation.
+**These are the main-study files.** The pilot versions of collection, dataset building, analysis, `run_all.py` and the dashboard now exist (see "How to run" above); the main-study tables and design expansion remain planned. EDSL is pinned to 1.0.9.
 
 | Planned file | Purpose |
 |---|---|

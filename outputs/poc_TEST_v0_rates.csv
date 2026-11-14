@@ -1,0 +1,10 @@
+model_id,persona_id,emotion,prompt_arm,gain_sell_rate,loss_sell_rate,n_gain,n_loss,disposition_effect_pp
+test,embarrassment_mid_desc,Embarrassment,emotion_description,0.0,0.0,3,3,0.0
+test,embarrassment_mid_name,Embarrassment,character_name,0.0,0.0,3,3,0.0
+test,fear_mid_desc,Fear,emotion_description,0.0,0.0,3,3,0.0
+test,fear_mid_name,Fear,character_name,0.0,0.0,3,3,0.0
+test,joy_mid_desc,Joy,emotion_description,0.0,0.0,3,3,0.0
+test,joy_mid_name,Joy,character_name,0.0,0.0,3,3,0.0
+test,neutral_generic,Neutral,control,0.0,0.0,3,3,0.0
+test,sadness_mid_desc,Sadness,emotion_description,0.0,0.0,3,3,0.0
+test,sadness_mid_name,Sadness,character_name,0.0,0.0,3,3,0.0

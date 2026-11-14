@@ -1,0 +1,2215 @@
+agent.persona_id,scenario.scenario_id,scenario.version,model.model,prompt.decision_system_prompt,prompt.decision_user_prompt,prompt.sell_rating_system_prompt,prompt.sell_rating_user_prompt
+joy_mid_name,s01,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Joy from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Joy would.","
+You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned +5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Sell the position
+    
+Hold the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Joy from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Joy would.","You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned +5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+joy_mid_name,s01,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Joy from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Joy would.","
+You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned -5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Sell the position
+    
+Hold the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Joy from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Joy would.","You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned -5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+joy_mid_name,s02,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Joy from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Joy would.","
+You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned +10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Joy from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Joy would.","You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned +10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+joy_mid_name,s02,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Joy from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Joy would.","
+You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned -10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Joy from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Joy would.","You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned -10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+joy_mid_name,s03,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Joy from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Joy would.","
+You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned +20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Joy from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Joy would.","You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned +20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+joy_mid_name,s03,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Joy from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Joy would.","
+You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned -20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Joy from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Joy would.","You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned -20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+joy_mid_desc,s01,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is joy: you are cheerful, optimistic, and energetic, and you look for the bright side of everything.","
+You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned +5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Sell the position
+    
+Hold the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is joy: you are cheerful, optimistic, and energetic, and you look for the bright side of everything.","You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned +5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+joy_mid_desc,s01,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is joy: you are cheerful, optimistic, and energetic, and you look for the bright side of everything.","
+You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned -5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Sell the position
+    
+Hold the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is joy: you are cheerful, optimistic, and energetic, and you look for the bright side of everything.","You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned -5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+joy_mid_desc,s02,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is joy: you are cheerful, optimistic, and energetic, and you look for the bright side of everything.","
+You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned +10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is joy: you are cheerful, optimistic, and energetic, and you look for the bright side of everything.","You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned +10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+joy_mid_desc,s02,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is joy: you are cheerful, optimistic, and energetic, and you look for the bright side of everything.","
+You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned -10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is joy: you are cheerful, optimistic, and energetic, and you look for the bright side of everything.","You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned -10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+joy_mid_desc,s03,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is joy: you are cheerful, optimistic, and energetic, and you look for the bright side of everything.","
+You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned +20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is joy: you are cheerful, optimistic, and energetic, and you look for the bright side of everything.","You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned +20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+joy_mid_desc,s03,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is joy: you are cheerful, optimistic, and energetic, and you look for the bright side of everything.","
+You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned -20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is joy: you are cheerful, optimistic, and energetic, and you look for the bright side of everything.","You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned -20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+sadness_mid_name,s01,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Sadness from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Sadness would.","
+You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned +5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Sell the position
+    
+Hold the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Sadness from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Sadness would.","You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned +5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+sadness_mid_name,s01,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Sadness from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Sadness would.","
+You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned -5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Sell the position
+    
+Hold the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Sadness from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Sadness would.","You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned -5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+sadness_mid_name,s02,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Sadness from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Sadness would.","
+You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned +10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Sadness from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Sadness would.","You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned +10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+sadness_mid_name,s02,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Sadness from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Sadness would.","
+You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned -10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Sadness from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Sadness would.","You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned -10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+sadness_mid_name,s03,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Sadness from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Sadness would.","
+You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned +20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Sadness from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Sadness would.","You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned +20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+sadness_mid_name,s03,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Sadness from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Sadness would.","
+You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned -20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Sadness from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Sadness would.","You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned -20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+sadness_mid_desc,s01,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is sadness: you feel low and pessimistic, and you dwell on things that did not go well.","
+You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned +5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Sell the position
+    
+Hold the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is sadness: you feel low and pessimistic, and you dwell on things that did not go well.","You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned +5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+sadness_mid_desc,s01,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is sadness: you feel low and pessimistic, and you dwell on things that did not go well.","
+You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned -5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Sell the position
+    
+Hold the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is sadness: you feel low and pessimistic, and you dwell on things that did not go well.","You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned -5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+sadness_mid_desc,s02,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is sadness: you feel low and pessimistic, and you dwell on things that did not go well.","
+You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned +10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is sadness: you feel low and pessimistic, and you dwell on things that did not go well.","You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned +10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+sadness_mid_desc,s02,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is sadness: you feel low and pessimistic, and you dwell on things that did not go well.","
+You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned -10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is sadness: you feel low and pessimistic, and you dwell on things that did not go well.","You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned -10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+sadness_mid_desc,s03,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is sadness: you feel low and pessimistic, and you dwell on things that did not go well.","
+You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned +20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is sadness: you feel low and pessimistic, and you dwell on things that did not go well.","You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned +20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+sadness_mid_desc,s03,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is sadness: you feel low and pessimistic, and you dwell on things that did not go well.","
+You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned -20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is sadness: you feel low and pessimistic, and you dwell on things that did not go well.","You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned -20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+fear_mid_name,s01,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Fear from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Fear would.","
+You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned +5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Sell the position
+    
+Hold the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Fear from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Fear would.","You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned +5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+fear_mid_name,s01,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Fear from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Fear would.","
+You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned -5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Sell the position
+    
+Hold the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Fear from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Fear would.","You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned -5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+fear_mid_name,s02,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Fear from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Fear would.","
+You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned +10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Fear from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Fear would.","You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned +10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+fear_mid_name,s02,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Fear from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Fear would.","
+You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned -10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Fear from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Fear would.","You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned -10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+fear_mid_name,s03,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Fear from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Fear would.","
+You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned +20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Fear from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Fear would.","You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned +20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+fear_mid_name,s03,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Fear from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Fear would.","
+You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned -20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Fear from the movie Inside Out is at the controls of your mind right now: you think, feel, and decide the way Fear would.","You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned -20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+fear_mid_desc,s01,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is fear: you are cautious and on alert, and you focus on what could go wrong.","
+You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned +5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Sell the position
+    
+Hold the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is fear: you are cautious and on alert, and you focus on what could go wrong.","You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned +5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+fear_mid_desc,s01,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is fear: you are cautious and on alert, and you focus on what could go wrong.","
+You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned -5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Sell the position
+    
+Hold the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is fear: you are cautious and on alert, and you focus on what could go wrong.","You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned -5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+fear_mid_desc,s02,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is fear: you are cautious and on alert, and you focus on what could go wrong.","
+You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned +10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is fear: you are cautious and on alert, and you focus on what could go wrong.","You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned +10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+fear_mid_desc,s02,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is fear: you are cautious and on alert, and you focus on what could go wrong.","
+You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned -10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is fear: you are cautious and on alert, and you focus on what could go wrong.","You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned -10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+fear_mid_desc,s03,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is fear: you are cautious and on alert, and you focus on what could go wrong.","
+You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned +20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is fear: you are cautious and on alert, and you focus on what could go wrong.","You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned +20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+fear_mid_desc,s03,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is fear: you are cautious and on alert, and you focus on what could go wrong.","
+You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned -20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is fear: you are cautious and on alert, and you focus on what could go wrong.","You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned -20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+embarrassment_mid_name,s01,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Embarrassment from the movie Inside Out 2 is at the controls of your mind right now: you think, feel, and decide the way Embarrassment would.","
+You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned +5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Sell the position
+    
+Hold the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Embarrassment from the movie Inside Out 2 is at the controls of your mind right now: you think, feel, and decide the way Embarrassment would.","You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned +5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+embarrassment_mid_name,s01,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Embarrassment from the movie Inside Out 2 is at the controls of your mind right now: you think, feel, and decide the way Embarrassment would.","
+You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned -5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Sell the position
+    
+Hold the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Embarrassment from the movie Inside Out 2 is at the controls of your mind right now: you think, feel, and decide the way Embarrassment would.","You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned -5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+embarrassment_mid_name,s02,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Embarrassment from the movie Inside Out 2 is at the controls of your mind right now: you think, feel, and decide the way Embarrassment would.","
+You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned +10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Embarrassment from the movie Inside Out 2 is at the controls of your mind right now: you think, feel, and decide the way Embarrassment would.","You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned +10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+embarrassment_mid_name,s02,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Embarrassment from the movie Inside Out 2 is at the controls of your mind right now: you think, feel, and decide the way Embarrassment would.","
+You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned -10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Embarrassment from the movie Inside Out 2 is at the controls of your mind right now: you think, feel, and decide the way Embarrassment would.","You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned -10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+embarrassment_mid_name,s03,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Embarrassment from the movie Inside Out 2 is at the controls of your mind right now: you think, feel, and decide the way Embarrassment would.","
+You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned +20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Embarrassment from the movie Inside Out 2 is at the controls of your mind right now: you think, feel, and decide the way Embarrassment would.","You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned +20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+embarrassment_mid_name,s03,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Embarrassment from the movie Inside Out 2 is at the controls of your mind right now: you think, feel, and decide the way Embarrassment would.","
+You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned -20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Embarrassment from the movie Inside Out 2 is at the controls of your mind right now: you think, feel, and decide the way Embarrassment would.","You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned -20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+embarrassment_mid_desc,s01,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is embarrassment: you are self-conscious and you hate the idea of other people seeing you make a mistake.","
+You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned +5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Sell the position
+    
+Hold the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is embarrassment: you are self-conscious and you hate the idea of other people seeing you make a mistake.","You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned +5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+embarrassment_mid_desc,s01,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is embarrassment: you are self-conscious and you hate the idea of other people seeing you make a mistake.","
+You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned -5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Sell the position
+    
+Hold the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is embarrassment: you are self-conscious and you hate the idea of other people seeing you make a mistake.","You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned -5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+embarrassment_mid_desc,s02,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is embarrassment: you are self-conscious and you hate the idea of other people seeing you make a mistake.","
+You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned +10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is embarrassment: you are self-conscious and you hate the idea of other people seeing you make a mistake.","You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned +10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+embarrassment_mid_desc,s02,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is embarrassment: you are self-conscious and you hate the idea of other people seeing you make a mistake.","
+You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned -10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is embarrassment: you are self-conscious and you hate the idea of other people seeing you make a mistake.","You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned -10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+embarrassment_mid_desc,s03,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is embarrassment: you are self-conscious and you hate the idea of other people seeing you make a mistake.","
+You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned +20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is embarrassment: you are self-conscious and you hate the idea of other people seeing you make a mistake.","You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned +20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+embarrassment_mid_desc,s03,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is embarrassment: you are self-conscious and you hate the idea of other people seeing you make a mistake.","
+You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned -20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are a 42-year-old mid-career professional saving for retirement in about 25 years. You put part of each paycheck into individual stocks and index funds. Right now your strongest feeling is embarrassment: you are self-conscious and you hate the idea of other people seeing you make a mistake.","You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned -20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+neutral_generic,s01,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are an individual investor saving for retirement. You put part of each paycheck into individual stocks and index funds.","
+You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned +5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Sell the position
+    
+Hold the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are an individual investor saving for retirement. You put part of each paycheck into individual stocks and index funds.","You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned +5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+neutral_generic,s01,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are an individual investor saving for retirement. You put part of each paycheck into individual stocks and index funds.","
+You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned -5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Sell the position
+    
+Hold the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are an individual investor saving for retirement. You put part of each paycheck into individual stocks and index funds.","You bought shares of Brightwater Logistics, a fictional freight and shipping company, 8 months ago. Since you bought them, your position has returned -5%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+neutral_generic,s02,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are an individual investor saving for retirement. You put part of each paycheck into individual stocks and index funds.","
+You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned +10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are an individual investor saving for retirement. You put part of each paycheck into individual stocks and index funds.","You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned +10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+neutral_generic,s02,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are an individual investor saving for retirement. You put part of each paycheck into individual stocks and index funds.","
+You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned -10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are an individual investor saving for retirement. You put part of each paycheck into individual stocks and index funds.","You bought shares of Halvorsen Biotech, a fictional biotechnology company, 14 months ago. Since you bought them, your position has returned -10%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+neutral_generic,s03,gain,test,"You are answering questions as if you were a human. Do not break character.
+You are an individual investor saving for retirement. You put part of each paycheck into individual stocks and index funds.","
+You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned +20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are an individual investor saving for retirement. You put part of each paycheck into individual stocks and index funds.","You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned +20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"
+neutral_generic,s03,loss,test,"You are answering questions as if you were a human. Do not break character.
+You are an individual investor saving for retirement. You put part of each paycheck into individual stocks and index funds.","
+You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned -20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+What do you do with this position today?
+
+    
+Hold the position
+    
+Sell the position
+    
+
+Only 1 option may be selected.
+
+Respond only with a string corresponding to one of the options.
+
+
+After the answer, you can put a comment explaining why you chose that option on the next line.","You are answering questions as if you were a human. Do not break character.
+You are an individual investor saving for retirement. You put part of each paycheck into individual stocks and index funds.","You bought shares of Quillfeather Software, a fictional business software company, 2 years ago. Since you bought them, your position has returned -20%. Analysts agree that the stock's expected return and risk over the next year are the same as the overall market's, and that its past price moves say nothing about its future. Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a broad stock index fund with the same expected return and risk.
+
+How likely are you to sell this position today?
+
+1 : Very unlikely
+
+2 : 
+
+3 : 
+
+4 : 
+
+5 : 
+
+6 : 
+
+7 : Very likely
+
+Only 1 option may be selected.
+
+
+Respond only with the code corresponding to one of the options. E.g., ""1"" or ""5"" by itself.
+"

@@ -18,3 +18,9 @@ The expanded eight-emotion, three-background, repeated/reworded experiment remai
 | PAID-001 | 2026-10-24 | Colab startup with execution log inside the protected output prefix | Guard stopped execution before requests; moved execution log outside outputs. No duplicate collection. |
 | PAID-002 | 2026-10-24 (2026-10-25 UTC) | Run poc_paid_20261025T012651Z; selected models, 9 personas, 3 paired scenarios, low effort, seed 331 | 108 observations; 100% valid decisions/ratings; 54/54 pairs; zero exceptions/cache hits. Expected Parrot reports $0.0307; response metadata sums to $0.030918. Raw-artifact transfer and comment review pending. |
 | ANALYSIS-001 | 2026-10-24 | Correct hand-check row selection to keep model/persona/scenario/repeat fixed | The original report selected two gain rows from different models. Fixed without changing behavioral estimates; regression suite now has four passing tests. |
+
+## Checkpoint 2 (v0)
+
+| ID | Date | Attempt | Outcome |
+|---|---|---|---|
+| V0-001 | 2026-11-14 | Free synthetic run `poc_TEST_v0` (EDSL test model, same 9 personas × 3 paired scenarios) through the new offline pipeline: `run_all.py` → build_dataset → poc_analyze → make_figures → dashboard | 54 rows; 100% valid; 27/27 pairs; all effects 0 by construction. Offline rebuild identical to the collector's tidy output. Plumbing check only; no behavioral inference. |
