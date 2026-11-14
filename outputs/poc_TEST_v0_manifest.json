@@ -1,0 +1,24 @@
+{
+  "run_id": "poc_TEST_v0",
+  "is_test": true,
+  "started_utc": "2026-11-14T22:17:49.546162+00:00",
+  "n_observations": 54,
+  "models": [
+    "test"
+  ],
+  "edsl_version": "1.0.9",
+  "model_settings": [
+    {
+      "temperature": 0.5
+    }
+  ],
+  "option_seed": 331,
+  "cache_policy": "fresh in-memory cache; remote cache disabled",
+  "personas_file": "inputs/personas_poc.csv",
+  "scenarios_file": "inputs/scenarios_poc.csv",
+  "input_sha256": {
+    "personas_poc.csv": "6b52e1e2f5081f689748b4dcfff09c12b09d5f8f4e6edda2ba36d50d4f9a68c9",
+    "models_poc.csv": "e44e36af95aa6b3c4091182c0fa74398f67cff9d33b463c301cf1a4bfb867744",
+    "scenarios_poc.csv": "d3eb792ab41900e2610b03d9401220b8dc27503584256c4d0d8748c3936bf712"
+  }
+}

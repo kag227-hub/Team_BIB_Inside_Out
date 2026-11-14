@@ -8,7 +8,7 @@ Run from the repository root with Python 3.13:
 python -m pip install -r requirements.txt
 python code/poc_run.py --plan
 python code/poc_run.py --test --run-id poc_TEST_local_check
-python code/poc_analyze.py outputs/poc_TEST_local_check_responses.csv
+python run_all.py   # rebuilds outputs/ for every run in data/raw/
 ```
 
 The free test returns fixed synthetic hold/4 answers to validate the pipeline. It is not behavioral evidence. Use a new run ID for each execution; existing artifacts cannot be overwritten.
@@ -22,7 +22,7 @@ Check account availability first:
 ```bash
 python -c "from edsl import Model; print(Model.available(service_name='openai', search_term='gpt-5.6-luna', force_refresh=True)); print(Model.available(service_name='anthropic', search_term='claude-haiku-5-5', force_refresh=True))"
 python code/poc_run.py --run-id poc_paid_001
-python code/poc_analyze.py outputs/poc_paid_001_responses.csv
+python run_all.py
 ```
 
 The runner prints its planning estimate and EDSL's account-based estimate before asking whether to proceed. It stops if credentials or the EDSL estimate are unavailable. Review the estimate against the team's budget before answering yes. `--yes` is available for an intentionally unattended run; it still requires a successful estimate. An estimate is not a provider-enforced spending cap.

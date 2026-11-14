@@ -6,8 +6,9 @@ What it does
   2. Expands every base scenario into a GAIN and a LOSS version and asserts that the two
      rendered texts differ ONLY in the sign of the return
   3. Builds an EDSL survey (sell/hold + 1-7 likelihood to sell), prints EDSL's cost estimate
-  4. Runs it, saves the raw EDSL results untouched, then writes one tidy row per
-     persona x scenario x version x model to outputs/poc_responses.csv
+  4. Runs it and saves the raw EDSL results untouched to data/raw/<run_id>/
+     (raw_results.ep/.csv, prompts.csv, manifest.json). Everything downstream is rebuilt
+     offline from those files by run_all.py.
 
 Usage (from the repo root)
   python code/poc_run.py --test        # free dry run with EDSL's built-in "test" model (fake answers)
@@ -26,11 +27,12 @@ import random
 from pathlib import Path
 
 import pandas as pd
+from build_dataset import HOLD, SELL, tidy_from_raw
 from edsl import (Agent, AgentList, Cache, Model, ModelList, QuestionLinearScale,
                   QuestionMultipleChoice, Scenario, ScenarioList, Survey)
 
 ROOT = Path(__file__).resolve().parents[1]
-INPUTS, OUTPUTS = ROOT / "inputs", ROOT / "outputs"
+INPUTS, OUTPUTS, RAW_DIR = ROOT / "inputs", ROOT / "outputs", ROOT / "data" / "raw"
 OUTPUTS.mkdir(exist_ok=True)
 
 SCENARIO_TEMPLATE = (
@@ -41,8 +43,6 @@ SCENARIO_TEMPLATE = (
     "Ignore taxes and trading costs. You do not need the cash. If you sell, the money goes into a "
     "broad stock index fund with the same expected return and risk."
 )
-
-SELL, HOLD = "Sell the position", "Hold the position"
 
 
 def synthetic_response(user_prompt, system_prompt, files_list):
@@ -136,7 +136,10 @@ def main():
     if args.run_id:
         assert Path(args.run_id).name == args.run_id and args.run_id not in (".", "..")
         run_id = args.run_id
-    assert not list(OUTPUTS.glob(f"{run_id}_*")), "Run ID already exists; choose a new one"
+    run_dir = RAW_DIR / run_id
+    assert not run_dir.exists() and not list(OUTPUTS.glob(f"{run_id}_*")), \
+        "Run ID already exists; choose a new one"
+    run_dir.mkdir(parents=True)
 
     q_decision = QuestionMultipleChoice(
         question_name="decision",
@@ -162,7 +165,7 @@ def main():
         try:
             cost_estimate = job.estimate_job_cost()
             print("EDSL cost estimate:", cost_estimate)
-            (OUTPUTS / f"{run_id}_estimate.json").write_text(
+            (run_dir / "estimate.json").write_text(
                 json.dumps(cost_estimate, indent=2, default=str))
         except Exception as e:
             raise SystemExit(f"Could not estimate cost; no paid calls made: {e}")
@@ -174,56 +177,18 @@ def main():
                       disable_remote_cache=True)
 
     # 1) Raw results, untouched (re-loadable with edsl.Results.load)
-    results.save(str(OUTPUTS / f"{run_id}_raw_results"))
+    results.save(str(run_dir / "raw_results"))
     raw = results.to_pandas(remove_prefix=False)
-    raw.to_csv(OUTPUTS / f"{run_id}_raw_results.csv", index=False)
+    raw.to_csv(run_dir / "raw_results.csv", index=False)
 
-    # 2) Tidy analysis rows
-    def col(name):
-        return raw[name] if name in raw.columns else pd.NA
-
-    tidy = pd.DataFrame({
-        "run_id": run_id,
-        "is_test": args.test,
-        "persona_id": col("agent.persona_id"),
-        "emotion": col("agent.emotion"),
-        "background": col("agent.background"),
-        "prompt_arm": col("agent.prompt_arm"),
-        "is_control": col("agent.is_control"),
-        "scenario_id": col("scenario.scenario_id"),
-        "version": col("scenario.version"),
-        "signed_return_pct": col("scenario.signed_return_pct"),
-        "abs_return_pct": col("scenario.abs_return_pct"),
-        "prompt_hash": col("scenario.prompt_hash"),
-        "model_id": col("model.model"),
-        "repeat": 0,
-        "decision_raw": col("answer.decision"),
-        "decision_comment": col("comment.decision_comment"),
-        "sell_rating_raw": col("answer.sell_rating"),
-        "option_order": col("scenario.decision_options").map(lambda x: "|".join(x)),
-        "run_started_utc": started,
-    })
-    tidy["sell"] = tidy["decision_raw"].map({SELL: 1, HOLD: 0})  # anything else -> NaN, never "hold"
-    tidy["sell_valid"] = tidy["sell"].notna()
-    rating = pd.to_numeric(tidy["sell_rating_raw"], errors="coerce")
-    tidy["sell_rating"] = rating.where(rating.between(1, 7) & rating.mod(1).eq(0))
-    tidy["rating_valid"] = tidy["sell_rating"].notna()
-
-    # usage / cost / cache columns: names vary by EDSL version, so keep whatever exists
-    for c in raw.columns:
-        if any(k in c for k in ("cost", "tokens", "cache_used", "cache_keys")) and "comment" not in c:
-            tidy[c.replace(".", "__")] = raw[c].values
-
-    key = ["run_id", "persona_id", "scenario_id", "version", "model_id", "repeat"]
-    assert not tidy[key].isna().any().any(), "missing analysis identifiers"
-    assert not tidy.duplicated(key).any(), "analysis key is not unique"
+    # 2) Tidy analysis rows (same function the offline rebuild uses: code/build_dataset.py)
+    tidy = tidy_from_raw(raw, run_id, args.test, started)
     assert len(tidy) == n_obs, "missing survey observations"
-    tidy.to_csv(OUTPUTS / f"{run_id}_responses.csv", index=False)
 
     # 3) Rendered prompts for the hand check
     prompt_cols = [c for c in raw.columns if c.startswith("prompt.")]
     raw[["agent.persona_id", "scenario.scenario_id", "scenario.version", "model.model"] + prompt_cols] \
-        .to_csv(OUTPUTS / f"{run_id}_prompts.csv", index=False)
+        .to_csv(run_dir / "prompts.csv", index=False)
 
     manifest = dict(run_id=run_id, is_test=args.test, started_utc=started, n_observations=len(tidy),
                     models=[m.model for m in models], edsl_version=__import__("edsl").__version__,
@@ -232,8 +197,8 @@ def main():
                     personas_file="inputs/personas_poc.csv", scenarios_file="inputs/scenarios_poc.csv",
                     input_sha256={p.name: hashlib.sha256(p.read_bytes()).hexdigest()
                                   for p in INPUTS.glob("*_poc.csv")})
-    (OUTPUTS / f"{run_id}_manifest.json").write_text(json.dumps(manifest, indent=2))
-    print(f"Saved {len(tidy)} rows to outputs/{run_id}_responses.csv")
+    (run_dir / "manifest.json").write_text(json.dumps(manifest, indent=2))
+    print(f"Saved raw artifacts to data/raw/{run_id}/. Rebuild outputs with: python run_all.py")
 
 
 if __name__ == "__main__":
