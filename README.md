@@ -1,5 +1,29 @@
 # Team BIB: “Inside Out” Silicon Investors
 
+> **Checkpoint 2 dashboard:** [GitHub Pages deployment](https://kag227-hub.github.io/Team_BIB_Inside_Out/) (pending: the repository owner must enable Pages with GitHub Actions and permit the checkpoint branch, or deploy after merge). The dashboard currently shows a labeled synthetic fixture—not the October paid pilot.
+
+### Run Checkpoint 2 v0
+
+From the repository root with Python 3.13 (standard library only):
+
+```sh
+python run_all.py
+python -m http.server 8000
+```
+
+Open [the local dashboard](http://localhost:8000/). The first command rebuilds `outputs/v0_dataset.csv`, `outputs/v0_sell_rates.csv`, and `outputs/v0_dashboard.json`; no API keys, model calls, or hand edits are needed. See the [self-audit](audits/01_self_audit.md).
+
+| Raw input | Provenance |
+|---|---|
+| `inputs/personas_poc.csv` | Team-authored pilot prompts: four emotions in two arms, plus neutral control. |
+| `inputs/scenarios_poc.csv` | Three team-authored fictional companies; 5%, 10%, and 20% paired gain/loss magnitudes. |
+| `inputs/models_poc.csv` | Two model IDs and settings from Checkpoint 1; these are labels only in v0. |
+| `inputs/v0_responses.csv` | Constructed November 14, 2026 as a synthetic test fixture covering the full 108-row pilot-shaped design. No responses were obtained from models for this file. |
+
+One row is one model × persona × scenario × gain/loss version for a single run. It contains design IDs, arm, signed return, the raw decision and rating, and their parsed values. Each source has a SHA-256 hash in the dashboard payload. Decision gaps use the same complete gain/loss pairs on both sides; ratings have their own complete-pair denominator. To use a normalized saved collection, pass `--responses path/to/file.csv` with the same schema and mark its rows `collected` only when backed by audited raw data. The old paid pilot is described separately in [Checkpoint 1](STATUS_checkpoint1.md); its raw files are not part of v0.
+
+For deployment, set **Settings → Pages → Source → GitHub Actions**, then run **Checkpoint 2 dashboard** for this branch from the Actions tab. If the github-pages environment restricts deployments to main, allow the checkpoint branch or deploy after merge. After the workflow turns green, open the Pages link and check that it displays the data and filters.
+
 **FIN 331 final project · Project seed #13 · Python + EDSL**
 
 Do LLM investor personas show the **disposition effect**—a greater tendency to sell investments with gains than investments with losses—and does that tendency depend on emotion or model?

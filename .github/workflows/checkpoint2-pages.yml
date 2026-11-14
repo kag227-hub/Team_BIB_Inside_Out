@@ -1,0 +1,35 @@
+name: Checkpoint 2 dashboard
+on:
+  push:
+    branches: [main, codex/checkpoint2-v0]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: checkpoint2-pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.publish.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python run_all.py
+      - uses: actions/configure-pages@v5
+      - name: Stage dashboard
+        run: |
+          mkdir -p _site/outputs
+          cp index.html dashboard.js _site/
+          cp outputs/v0_dashboard.json outputs/v0_dataset.csv outputs/v0_sell_rates.csv _site/outputs/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - uses: actions/deploy-pages@v4
+        id: publish

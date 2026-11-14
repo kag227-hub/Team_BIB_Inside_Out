@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inside Out Silicon Investors | Team BIB</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f3ff;color:#211637;font:16px/1.55 system-ui,sans-serif}
+header{background:#2c1852;color:#fff;padding:2.5rem max(5vw,1rem)}header p{max-width:42rem}
+nav{display:flex;flex-wrap:wrap;gap:1.1rem;margin-top:1.4rem}nav a{color:#fff}h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.05;margin:.4em 0}
+main{max-width:70rem;margin:auto;padding:1rem}section{margin:1.25rem 0;padding:1.25rem;background:#fff;border:1px solid #ddd3ef;border-radius:14px}
+.notice{padding:.7rem 1rem;border-left:5px solid #aa4a09;background:#fff3df}.table{overflow:auto}table{width:100%;border-collapse:collapse;font-size:.92rem}
+th,td{padding:.55rem;text-align:left;border-bottom:1px solid #e4deed;white-space:nowrap}th{background:#eee8fa}
+label{display:inline-block;margin:0 1em .8em 0}select{display:block;font:inherit;padding:.35rem}a{color:#582ca2}
+</style>
+<header id="intro"><strong>TEAM BIB · FIN 331 · CHECKPOINT 2</strong>
+<h1>Inside Out Silicon Investors</h1>
+<p>Are simulated investors more likely to sell winners than losers? Explore how a small matched design compares emotional framing across two model configurations.</p>
+<nav aria-label="Dashboard sections"><a href="#intro">Intro</a><a href="#method">Methodology</a><a href="#results">Results</a><a href="#explore">Explore</a></nav>
+</header>
+<main>
+<p id="status" class="notice" role="status">Loading offline v0 outputs…</p>
+<section id="method"><h2>Methodology</h2>
+<p>Each scenario has a gain and a loss version for the same fictional stock. We compare sell decisions within the same persona, scenario and model. The reported gap is the gain sell rate minus the loss sell rate, in percentage points, using only pairs with two valid choices. Ratings are summarized separately.</p>
+<p>Each emotion and prompt-arm cell has only three pairs. The demo does not report confidence intervals or establish a behavioral effect. <a href="https://github.com/kag227-hub/Team_BIB_Inside_Out">Project repository</a></p>
+</section>
+<section id="results"><h2>Results</h2>
+<p>Positive gaps mean more sell decisions on gains. The neutral control appears as its own row.</p>
+<label>Model <select id="model"><option value="">All models</option></select></label>
+<label>Prompt arm <select id="arm"><option value="">All arms</option></select></label>
+<div id="summary" class="table"></div>
+<p><a href="outputs/v0_sell_rates.csv">Download result table (CSV)</a></p>
+</section>
+<section id="explore"><h2>Explore</h2><p id="counts"></p><div id="rows" class="table"></div>
+<p><a href="outputs/v0_dataset.csv">Download all response rows (CSV)</a></p>
+</section>
+</main>
+<script src="dashboard.js" defer></script>
+</html>
