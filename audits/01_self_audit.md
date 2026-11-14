@@ -2,10 +2,9 @@
 
 **Team BIB · Inside Out Silicon Investors · audited November 14, 2026**
 
-> **Draft for the team to edit.** The findings below come from a skeptical review of the repository at the
-> Checkpoint 2 branch. Before submitting, (1) re-run the course's exact *Skeptical review* prompt
-> (Quick Reference → *Starter prompts for coding agents* → #5) and merge anything new into Section 1, and
-> (2) fill in the 10-point checklist in Section 3 using the wording in `00_PROJECT_SEEDS`.
+> Findings below come from a skeptical review of the repository at the Checkpoint 2 branch. The ten-point
+> checklist in Section 3 uses the course checklist items as filled in by Ayushi (from
+> [PR #5](https://github.com/kag227-hub/Team_BIB_Inside_Out/pull/5)), with the evidence updated for this pipeline.
 
 ## 1. What the review flagged, and which findings are real
 
@@ -56,32 +55,15 @@
 
 ## 3. Ten-point checklist (`00_PROJECT_SEEDS`)
 
-> **TODO (team):** copy the ten item names from the top of `00_PROJECT_SEEDS` into the first column. The
-> notes column suggests relevant evidence from this audit.
-
-| # | Checklist item (from `00_PROJECT_SEEDS`) | Status (OK / problem / not yet) | Note |
-|---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
-
-Evidence to draw on when filling it in:
-
-- **One-command reproducibility:** OK (`run_all.py`).
-- **Raw data committed:** problem (F1).
-- **Secrets out of git:** OK (`.env` ignored, key read from the environment).
-- **Unique keys / merge checks:** OK (asserted in `build_dataset.py` and `poc_analyze.py`).
-- **Look-ahead / survivorship:** N/A, fictional firms.
-- **LLM leakage:** problem, partly mitigated (F6, F7).
-- **Specification log:** OK (`specs_tried.md`).
-- **Pre-registration / p-hacking:** not yet (F11).
-- **Uncertainty reported:** not yet (F5).
-- **Dashboard live:** not yet.
-- **Hand check:** OK on synthetic data; paid run pending (F1).
+| Course checklist | Status | Evidence / follow-up |
+|---|---|---|
+| 1. Reproduces | OK | `python run_all.py` deletes and regenerates every v0 output from `data/raw/` offline, with no API keys or model calls. 7 tests pass (`python -m unittest discover -s tests`). |
+| 2. Input provenance | OK for v0; **problem** for the paid pilot | The v0 run's raw EDSL results, rendered prompts and manifest (with SHA-256 hashes of the input tables) are committed in `data/raw/poc_TEST_v0/`. The paid pilot's raw files are still missing (F1). |
+| 3. Unit and keys | OK | One row = run × persona × scenario × gain/loss version × model × repeat. Key uniqueness, missing identifiers and the row count against the manifest are asserted in `code/build_dataset.py`; `code/poc_analyze.py` re-checks keys and reports incomplete pairs. |
+| 4. Look-ahead | OK | Fictional companies, with no market history, realized future prices or historically selected sample (F15). |
+| 5. LLM leakage | **problem** | Learned disposition-effect concepts, *Inside Out* character cues and EDSL's "Do not break character" instruction can cue the expected behavior (F6, F7). Plan: hand-read comments, run prompt-sensitivity checks, compare arms with the neutral control. |
+| 6. No p-hacking | **problem** | Pilot specifications are logged in `specs_tried.md`, but primary tests, the multiple-comparison adjustment and failure rules are not yet frozen in a dated file (F11). |
+| 7. Magnitudes | OK | Both component sell rates, the percentage-point gap and the pair counts are reported for every persona × model (`outputs/*_summary_table.csv`). There are no confidence intervals yet (F5), and the synthetic v0 effects have no behavioral meaning. |
+| 8. Hand checks | OK on synthetic; **not yet** on real data | `code/poc_analyze.py` prints one matched pair for hand verification against the saved prompts; tests check that invalid answers never become "hold" and that only complete pairs enter the rates. Repeat on the paid pilot after import. |
+| 9. Threats to validity | OK | See Sections 1–2 of this audit and the README's "Threats to validity" (leakage, framing, option order, sample size, benchmark mismatch). |
+| 10. Team understanding | not yet | Each teammate should rerun v0 and be able to explain the join keys, invalid-answer handling and the paired gain-minus-loss estimator. |
