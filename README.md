@@ -27,11 +27,11 @@ streamlit run dashboard/app.py         # dashboard, reads outputs/ only
 | 2. Build dataset | `code/build_dataset.py` | `data/raw/<run_id>/raw_results.csv` → `outputs/<run_id>_responses.csv` |
 | 3. Analyze | `code/poc_analyze.py` | → `*_feasibility.md`, `*_rates.csv`, `*_cost_projection.csv` |
 | 4. Table + figure | `code/make_figures.py` | → `*_summary_table.csv/.md`, `*_disposition_by_persona.png` |
-| 5. Dashboard | `dashboard/app.py` | `outputs/` + `data/raw/<run_id>/prompts.csv` |
+| 5. Dashboard | `dashboard/app.py` | `outputs/public_paid_pilot.json` (paid pilot aggregates only) |
 
-**Data.** `data/raw/poc_TEST_v0/` is a free synthetic run (EDSL's test model answers "hold / 4" to everything), so its effects are zero by construction. It proves the plumbing only. **To load the paid pilot,** copy that run's files from Colab or Expected Parrot into `data/raw/poc_paid_20261025T012651Z/` as `raw_results.csv`, `raw_results.ep`, `prompts.csv` and `manifest.json`. Check them for credentials, then run `python run_all.py`. The dashboard shows a paid run by default whenever one exists.
+**Data.** The public dashboard displays counts and sell rates from the October paid pilot (108 model responses, 54 matched gain/loss pairs). The committed [public export](outputs/public_paid_pilot.json) contains counts by model, emotion, and prompt arm only. Paid response rows, individual prompts, model comments, and usage records stay private for course verification. The committed `poc_TEST_v0` inputs remain a separate synthetic pipeline check; `python run_all.py` rebuilds that check offline and does not overwrite the public paid export.
 
-**Dashboard.** Deploy on [Streamlit Community Cloud](https://share.streamlit.io): New app → this repo → branch `main` → main file `dashboard/app.py` (it installs `dashboard/requirements.txt`). Paste the URL at the top of this README.
+**Dashboard.** Deploy on [Streamlit Community Cloud](https://share.streamlit.io): New app → this repo → branch `main` → main file `dashboard/app.py` (it installs `dashboard/requirements.txt`). Paste the URL at the top of this README. Authorized reviewers with the private paid CSV can rebuild the paid run locally, then regenerate the public export with `python code/export_public_pilot.py outputs/poc_paid_20261025T012651Z_responses.csv outputs/public_paid_pilot.json`. Do not commit the private inputs or paid row-level outputs.
 
 **Self-audit:** [audits/01_self_audit.md](audits/01_self_audit.md).
 
