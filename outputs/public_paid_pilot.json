@@ -1,0 +1,151 @@
+{
+  "run_id": "poc_paid_20261025T012651Z",
+  "source": "paid_model_pilot",
+  "observations": 108,
+  "cells": [
+    {
+      "model_id": "claude-haiku-5-5",
+      "emotion": "Embarrassment",
+      "prompt_arm": "character_name",
+      "complete_pairs": 3,
+      "gain_sells": 1,
+      "loss_sells": 2
+    },
+    {
+      "model_id": "claude-haiku-5-5",
+      "emotion": "Embarrassment",
+      "prompt_arm": "emotion_description",
+      "complete_pairs": 3,
+      "gain_sells": 2,
+      "loss_sells": 0
+    },
+    {
+      "model_id": "claude-haiku-5-5",
+      "emotion": "Fear",
+      "prompt_arm": "character_name",
+      "complete_pairs": 3,
+      "gain_sells": 3,
+      "loss_sells": 3
+    },
+    {
+      "model_id": "claude-haiku-5-5",
+      "emotion": "Fear",
+      "prompt_arm": "emotion_description",
+      "complete_pairs": 3,
+      "gain_sells": 3,
+      "loss_sells": 3
+    },
+    {
+      "model_id": "claude-haiku-5-5",
+      "emotion": "Joy",
+      "prompt_arm": "character_name",
+      "complete_pairs": 3,
+      "gain_sells": 0,
+      "loss_sells": 0
+    },
+    {
+      "model_id": "claude-haiku-5-5",
+      "emotion": "Joy",
+      "prompt_arm": "emotion_description",
+      "complete_pairs": 3,
+      "gain_sells": 0,
+      "loss_sells": 1
+    },
+    {
+      "model_id": "claude-haiku-5-5",
+      "emotion": "Neutral",
+      "prompt_arm": "control",
+      "complete_pairs": 3,
+      "gain_sells": 0,
+      "loss_sells": 0
+    },
+    {
+      "model_id": "claude-haiku-5-5",
+      "emotion": "Sadness",
+      "prompt_arm": "character_name",
+      "complete_pairs": 3,
+      "gain_sells": 1,
+      "loss_sells": 0
+    },
+    {
+      "model_id": "claude-haiku-5-5",
+      "emotion": "Sadness",
+      "prompt_arm": "emotion_description",
+      "complete_pairs": 3,
+      "gain_sells": 3,
+      "loss_sells": 2
+    },
+    {
+      "model_id": "gpt-5.6-luna",
+      "emotion": "Embarrassment",
+      "prompt_arm": "character_name",
+      "complete_pairs": 3,
+      "gain_sells": 1,
+      "loss_sells": 3
+    },
+    {
+      "model_id": "gpt-5.6-luna",
+      "emotion": "Embarrassment",
+      "prompt_arm": "emotion_description",
+      "complete_pairs": 3,
+      "gain_sells": 3,
+      "loss_sells": 2
+    },
+    {
+      "model_id": "gpt-5.6-luna",
+      "emotion": "Fear",
+      "prompt_arm": "character_name",
+      "complete_pairs": 3,
+      "gain_sells": 2,
+      "loss_sells": 2
+    },
+    {
+      "model_id": "gpt-5.6-luna",
+      "emotion": "Fear",
+      "prompt_arm": "emotion_description",
+      "complete_pairs": 3,
+      "gain_sells": 2,
+      "loss_sells": 3
+    },
+    {
+      "model_id": "gpt-5.6-luna",
+      "emotion": "Joy",
+      "prompt_arm": "character_name",
+      "complete_pairs": 3,
+      "gain_sells": 1,
+      "loss_sells": 3
+    },
+    {
+      "model_id": "gpt-5.6-luna",
+      "emotion": "Joy",
+      "prompt_arm": "emotion_description",
+      "complete_pairs": 3,
+      "gain_sells": 0,
+      "loss_sells": 2
+    },
+    {
+      "model_id": "gpt-5.6-luna",
+      "emotion": "Neutral",
+      "prompt_arm": "control",
+      "complete_pairs": 3,
+      "gain_sells": 2,
+      "loss_sells": 1
+    },
+    {
+      "model_id": "gpt-5.6-luna",
+      "emotion": "Sadness",
+      "prompt_arm": "character_name",
+      "complete_pairs": 3,
+      "gain_sells": 1,
+      "loss_sells": 2
+    },
+    {
+      "model_id": "gpt-5.6-luna",
+      "emotion": "Sadness",
+      "prompt_arm": "emotion_description",
+      "complete_pairs": 3,
+      "gain_sells": 3,
+      "loss_sells": 3
+    }
+  ]
+}
