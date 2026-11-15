@@ -1,7 +1,7 @@
 # Inside Out Silicon Investors
 
 **Team BIB · FIN 331**  
-**Team members:** Natalie Leung, Ayushi Jain, Lily Notivsky, Kara Grossman
+**Team members:** Natalie Leung, Ayushi Jain, Lily Novitsky, Kara Grossman
 
 ## Research question
 
