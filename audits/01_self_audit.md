@@ -2,9 +2,15 @@
 
 **Team BIB · Inside Out Silicon Investors · audited November 14, 2026 · updated after PR #8 (paid-pilot summary counts)**
 
-> Findings below come from a skeptical review of the repository at the Checkpoint 2 branch. The ten-point
-> checklist in Section 3 uses the course checklist items as filled in by Ayushi (from
-> [PR #5](https://github.com/kag227-hub/Team_BIB_Inside_Out/pull/5)), with the evidence updated for this pipeline.
+> **How this review was done.** On November 15, 2026 we ran the course's *Skeptical review* prompt
+> (Quick Reference → *Starter prompts for coding agents* → #5) on `main`, word for word: *"Review this repo
+> like a skeptical finance professor. Look for look-ahead bias and leakage, merges without `validate`, unit
+> and frequency mismatches, hard-coded paths or keys, and steps that don't reproduce from `run_all.py`. List
+> issues ranked by severity; don't fix anything yet."* It ranked F1 (paid results not reproducible) and F6/F7
+> (LLM leakage, demand cues) as the most severe, and flagged F16–F20 as new. It found no merges without
+> `validate` and no look-ahead bias (F15). The ten-point checklist in Section 3 uses the course checklist items as
+> filled in by Ayushi (from [PR #5](https://github.com/kag227-hub/Team_BIB_Inside_Out/pull/5)), with the
+> evidence updated for this pipeline.
 
 ## 1. What the review flagged, and which findings are real
 
@@ -25,6 +31,11 @@
 | F13 | `.gitignore` excluded `outputs/poc_TEST_*`, which would hide v0 outputs from the dashboard. | Real — **fixed (PR #6)** | `.gitignore`. |
 | F14 | `requirements.txt` lacked `matplotlib`, which the figure step needs. | Real — **fixed (PR #6)** | `requirements.txt`. |
 | F15 | Look-ahead bias, survivorship bias, merge errors. | **Not applicable / low** | Fictional firms and no time series, so no look-ahead or survivorship. No dataset merges: persona traits travel inside each EDSL agent, and keys are asserted unique. |
+| F16 | **Past returns cover different time spans (unit / frequency mismatch).** The 5%, 10% and 20% returns are cumulative over 8, 14 and 24 months, so annualized they are almost the same (7.6%, 8.5%, 9.5% a year), while the future is described over one year. The "return size" factor is really a time-span difference; we can't tell whether models react to the total gain or the yearly gain. | **Real** | `inputs/scenarios_poc.csv` (`holding_period`, `abs_return_pct`). |
+| F17 | **`run_all.py` and the README describe the dashboard wrongly.** `run_all.py` says it rebuilds "every output" and writes `runs.json` "which the dashboard reads", but since PR #8 the dashboard reads only `outputs/public_paid_pilot.json`, which `run_all.py` never touches. | **Real** | `run_all.py` docstring and final print; `dashboard/app.py` line 9. |
+| F18 | **Leftover files in `outputs/` that `run_all.py` doesn't produce.** `checkpoint1_validation.json` refers to a run (`poc_TEST_validated`) that no longer exists; `checkpoint1_dry_run_feasibility.md` and `poc_planning_estimate.csv` are also not rebuilt. | **Real**, low | `outputs/`. |
+| F19 | **Mixed units in one table.** `outputs/*_summary_table.csv` shows sell rates as fractions (0–1) next to the gap in percentage points; the dashboard shows percentages. Labels are correct but easy to misread. | **Real**, low | `code/make_figures.py`, `code/poc_analyze.py`. |
+| F20 | **Key hygiene is missing two course-recommended files.** No hard-coded keys or absolute paths were found (code, data, and the zipped raw-results archive), but `.gitignore` does not list `.streamlit/secrets.toml` and there is no `.env.example`. | **Real**, low | `.gitignore`; Quick Reference starter prompt #2. |
 
 ## 2. Fixed vs. still open
 
@@ -44,7 +55,6 @@
 | Finding | Plan | Owner / when |
 |---|---|---|
 | F1, F2 | Commit the paid run's raw files to `data/raw/poc_paid_20261025T012651Z/` (`raw_results.csv`, `raw_results.ep`, `prompts.csv`, `manifest.json`) after checking them for credentials, then run `python run_all.py`. This rebuilds the real dataset, table and figure, and lets the dashboard show individual responses again. If the team decides to keep them private, state the reason here and in the README. | _team_ · before the instructor reviews the PR |
-| Dashboard live | Deploy `dashboard/app.py` on Streamlit Community Cloud and put the URL at the top of the README. | _team_ · this week |
 | F3, F4 | Main study: randomize option order *within* scenario across personas or repeats (still fixed within a gain/loss pair), and use several companies per magnitude (the README's 20 base scenarios). | Before freezing the main design |
 | F5 | Add a paired bootstrap over base scenarios for persona-level intervals; cluster by persona for pooled estimates (README "Outcomes and analysis"). | Next analysis PR |
 | F6 | Test one arm with EDSL's default instruction removed or replaced; log it in `specs_tried.md`. Keep the "past moves say nothing" sentence (it defines the rational benchmark), but report the issue. | Pilot 2 |
@@ -53,6 +63,11 @@
 | F9 | Keep settings as chosen (disclosed), and report model comparisons as "model + configuration". | Ongoing |
 | F10 | Report the decision/rating agreement rate; consider a single structured question as a robustness arm. | Next analysis PR |
 | F11 | Freeze the primary hypotheses (emotion-level gaps vs. neutral, per model), the multiple-comparison adjustment and the failure rules in a timestamped file before the main run. | Before the main run |
+| F16 | In the main design, hold the holding period fixed when varying return size (or vary both on a grid), and state past returns on the same horizon as the one-year outlook. | Before freezing the main design |
+| F17 | Fix the `run_all.py` docstring and final message, and the README "How to run" note, so they say the dashboard reads the paid-pilot summary file, which `run_all.py` does not rebuild. | Next PR |
+| F18 | Move the Checkpoint 1 files out of `outputs/` (for example to `archive/checkpoint1/`) so `outputs/` holds only what `run_all.py` makes. | Next PR |
+| F19 | Report all rates in percent in the saved tables to match the dashboard. | Next analysis PR |
+| F20 | Add `.streamlit/secrets.toml` to `.gitignore` and add an `.env.example` showing `EXPECTED_PARROT_API_KEY=` with no value. | Next PR |
 
 ## 3. Ten-point checklist (`00_PROJECT_SEEDS`)
 
