@@ -1,6 +1,6 @@
 # Team BIB: “Inside Out” Silicon Investors
 
-**📊 Live dashboard: _TODO — paste the Streamlit Community Cloud URL here after deploying (see "Dashboard" below)_**
+**📊 Live dashboard: (https://teambibinsideout-tkgtmunmsq9qkk3gjgrgdd.streamlit.app/)**
 
 **FIN 331 final project · Project seed #13 · Python + EDSL**
 
