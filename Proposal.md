@@ -67,6 +67,6 @@ The paid pilot has three pairs per model-and-persona combination, so a single de
 
 ## Dashboard mockup
 
-*[Insert your dashboard screenshot here.]*
+![Dashboard mockup: results page](dashboard1.png)
 
 The dashboard lets readers filter by model and persona prompt type, compare gain and loss sell rates, and see the gap and number of pairs behind each estimate. The neutral persona provides a reference for interpreting the character results.
