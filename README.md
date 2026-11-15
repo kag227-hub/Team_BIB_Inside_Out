@@ -2,6 +2,8 @@
 
 > **Checkpoint 2 dashboard:** [GitHub Pages deployment](https://kag227-hub.github.io/Team_BIB_Inside_Out/) (pending: the repository owner must enable Pages with GitHub Actions and permit the checkpoint branch, or deploy after merge). The dashboard currently shows a labeled synthetic fixture—not the October paid pilot.
 
+This README explains the study, how to rerun Checkpoint 2, and where the dashboard data comes from. The course proposal belongs in `PROPOSAL.md` at the repository root on the Checkpoint 2 branch.
+
 ### Run Checkpoint 2 v0
 
 From the repository root with Python 3.13 (standard library only):
@@ -30,9 +32,9 @@ Do LLM investor personas show the **disposition effect**—a greater tendency to
 
 We study investors inspired by the emotions in *Inside Out*: **Joy, Sadness, Anger, Fear, Disgust, Anxiety, Envy, and Embarrassment**. Each emotion is crossed with three backgrounds: novice investor, mid-career saver, and retiree. A neutral, no-emotion investor provides a reference.
 
-**Status:** experimental design and pipeline plan. This README does not report experimental results. Model choices, exact prompts, budget, and analysis specifications must be frozen and timestamped before the main run. If any pilot responses have already been examined, disclose them and label subsequent predictions accordingly.
+**Status:** Checkpoint 2 provides a reproducible offline pipeline with synthetic test data. The larger study is planned. Before collecting that sample, freeze and timestamp the model settings, exact prompts, budget, and analysis plan. Document which predictions were recorded after reviewing the pilot.
 
-**Checkpoint 1 update (October 24, 2026):** pilot collection and analysis scripts are implemented and have passed a synthetic dry run. GPT-5.6 Luna and Claude Haiku 5.5 are selected for the paid pilot; credentials and live availability still need verification. See [POC_README.md](POC_README.md), [MODEL_SELECTION.md](MODEL_SELECTION.md), and [STATUS_checkpoint1.md](STATUS_checkpoint1.md). The larger study described below remains planned.
+**October 24, 2026 paid pilot:** GPT-5.6 Luna and Claude Haiku 5.5 produced 108 model responses and 54 complete gain/loss pairs. The [public Streamlit dashboard](https://teambibinsideout-tkgtmunmsq9qkk3gjgrgdd.streamlit.app/) shows aggregate results. See [Checkpoint 1](STATUS_checkpoint1.md) for the project record and [model selection](MODEL_SELECTION.md) for the selection rationale.
 
 ## Why this question matters
 
