@@ -49,6 +49,7 @@
 - **Dashboard skeleton** (`dashboard/app.py`): Intro, Methodology, Results and Explore pages, reading only saved files.
 - **Real paid-pilot results on the dashboard** (PR #8): matched-pair counts, gain and loss sell rates and their gap for each model × emotion × prompt arm, with filters. The counts reproduce the figures reported in `STATUS_checkpoint1.md` (see checklist item 8).
 - F12, F13 and F14 above.
+- - **Dashboard live** at https://teambibinsideout-tkgtmunmsq9qkk3gjgrgdd.streamlit.app/
 
 ### Still open, with plan
 
