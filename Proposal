@@ -1,1 +1,11 @@
-
+# It is common for investors to have a general idea of where they fall on the risk-appetite scale. But, there are so many more facets of someone's personality that explain where they will chose to invest. 
+# Is this quantifiable? Is it possible to categorize someone's investments into a specific personality type? How can understand where you fall as an investing personality help you diversify more?
+# We aim to quantify this in "Inside Out Silicon Valley", taking the 6 personalities from this Pixar classic 'Inside Out' and adding two more:
+Joy	- Pride in gains leads to selling winners quickly.
+Sadness - Regret leads to holding losers.
+Anger - Holds losers to “make it back.”
+Fear - Sells winners early; may also sell losers to reduce exposure.
+Disgust	- Sells losers quickly.
+Envy - Holds or chases winners; the binary task tests the holding prediction only.
+Anxiety -	Sells winners early; may also sell losers to reduce uncertainty.
+Embarrassment	- Holds losers to avoid admitting a mistake.
