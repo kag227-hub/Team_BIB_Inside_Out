@@ -43,6 +43,8 @@ To verify the dashboard export from a fresh clone, run the pipeline and then che
 
 **Dashboard hosting.** The published app uses branch `main`, entry point `dashboard/app.py`, and dependencies in `dashboard/requirements.txt`. It reads `outputs/public_paid_pilot.json`. The Intro, Methodology, Results, and Explore pages show pilot counts, sell rates, and gaps, with model, emotion, and prompt-arm filters.
 
+**Analysis plan (frozen before the main run):** [ANALYSIS_PLAN.md](ANALYSIS_PLAN.md).
+
 **Self-audit:** [audits/01_self_audit.md](audits/01_self_audit.md).
 
 ## Why this question matters
