@@ -4,15 +4,17 @@
 
 Updated November 17, 2026.
 
+Read the [proposal](PROPOSAL.md) and [project status](STATUS.md) for the research motivation, completed pilot, and remaining work.
+
 **FIN 331 final project · Project seed #13 · Python + EDSL**
 
 Do LLM investor personas show the **disposition effect**—a greater tendency to sell investments with gains than investments with losses—and does that tendency depend on emotion or model?
 
 The planned full study covers investors inspired by the emotions in *Inside Out*: **Joy, Sadness, Anger, Fear, Disgust, Anxiety, Envy, and Embarrassment**. Each emotion is crossed with three backgrounds: novice investor, mid-career saver, and retiree. A neutral, no-emotion investor provides a reference.
 
-**Current status.** The paid pilot is complete. It collected 108 survey observations across two models and nine personas, producing 54 complete gain/loss pairs. The public Streamlit dashboard displays its aggregate results. The offline pipeline rebuilds the synthetic test run from committed raw files. The larger eight-emotion, three-background study is planned.
+**Current status.** The paid pilot is complete. It collected 108 survey observations across two models and nine personas, producing 54 complete gain/loss pairs. The public Streamlit dashboard displays its aggregate results. The offline pipeline rebuilds both paid and synthetic runs from committed raw files. The larger eight-emotion, three-background study is planned.
 
-**Paid pilot, October 24, 2026 (ET).** GPT-5.6 Luna and Claude Haiku 5.5 evaluated Joy, Sadness, Fear, and Embarrassment in character-name and emotion-description prompts, plus a neutral control. Each persona evaluated three fictional scenarios in gain and loss versions. The recorded job charge was $0.0307. The run ID is `poc_paid_20261025T012651Z` because collection occurred on October 25 in UTC. See [Checkpoint 1](STATUS_checkpoint1.md), [pilot instructions](POC_README.md), and [model selection](MODEL_SELECTION.md).
+**Paid pilot, October 24, 2026 (ET).** GPT-5.6 Luna and Claude Haiku 5.5 evaluated Joy, Sadness, Fear, and Embarrassment in character-name and emotion-description prompts, plus a neutral control. Each persona evaluated three fictional scenarios in gain and loss versions. The recorded job charge was $0.0307. The run ID is `poc_paid_20261025T012651Z` because collection occurred on October 25 in UTC. See [Checkpoint 1](STATUS.md), [pilot instructions](POC_README.md), and [model selection](MODEL_SELECTION.md).
 
 The pilot has three matched pairs per model and persona cell. For Embarrassment, the gain-minus-loss gap changes from −66.7 to +33.3 percentage points across prompt arms for GPT-5.6 Luna, and from −33.3 to +66.7 for Claude Haiku 5.5. With so few pairs, these estimates are exploratory. Confidence intervals, additional wording checks, and the expanded study remain to be completed.
 
@@ -33,13 +35,11 @@ streamlit run dashboard/app.py        # displays the saved public paid-pilot agg
 | 4. Table + figure | `code/make_figures.py` | → `*_summary_table.csv/.md`, `*_disposition_by_persona.png` |
 | 5. Dashboard | `dashboard/app.py` | `outputs/public_paid_pilot.json` (paid pilot aggregates only) |
 
-**Data.** The public dashboard displays counts and sell rates from the October paid pilot (108 model responses, 54 matched gain/loss pairs). The committed [public export](outputs/public_paid_pilot.json) contains counts by model, emotion, and prompt arm only. Paid response rows, individual prompts, model comments, and usage records stay private for course verification. The committed `poc_TEST_v0` inputs remain a separate synthetic pipeline check; `python run_all.py` rebuilds that check offline and does not overwrite the public paid export.
+**Data and offline reproducibility.** The repository includes the paid run's saved EDSL Results CSV, rendered prompts, and manifest in `data/raw/poc_paid_20261025T012651Z/`. It contains 108 survey observations and 54 complete gain/loss pairs. `python run_all.py` rebuilds the paid dataset, analysis, table, figure, and `outputs/public_paid_pilot.json`, as well as the synthetic test run. The dashboard reads the regenerated paid export.
 
-**Rebuilding the paid export.** Reviewers with the private raw artifacts can place them in `data/raw/poc_paid_20261025T012651Z/`, run `python run_all.py`, then regenerate the public counts with the command below. A public checkout can rerun the synthetic pipeline and display the committed paid counts. Rechecking the paid response parsing, exact prompts, and costs requires the private artifacts.
+The saved CSV retains answers, model comments, exact prompts, settings, and usage/cost fields. Provider response envelopes, internal reasoning summaries, and cache identifiers were omitted from this public copy. The recovered manifest records the original download hash, public CSV hash, omissions, and reported job charge. It was reconstructed from the saved run and is identified as recovered provenance. The original binary `.ep` artifact is unavailable locally. All retained CSV fields were checked against the original download. No new model calls are required.
 
-```bash
-python code/export_public_pilot.py outputs/poc_paid_20261025T012651Z_responses.csv outputs/public_paid_pilot.json
-```
+To verify the dashboard export from a fresh clone, run the pipeline and then check `git diff --exit-code -- outputs/public_paid_pilot.json`. A zero exit code confirms the generated export matches the committed file byte for byte.
 
 **Dashboard hosting.** The published app uses branch `main`, entry point `dashboard/app.py`, and dependencies in `dashboard/requirements.txt`. It reads `outputs/public_paid_pilot.json`. The Intro, Methodology, Results, and Explore pages show pilot counts, sell rates, and gaps, with model, emotion, and prompt-arm filters.
 
@@ -208,7 +208,7 @@ Before the final submission:
 
 ## Threats to validity
 
-The [self-audit](audits/01_self_audit.md) records the outstanding checks. Paid response-level verification, uncertainty intervals, manual review of model comments, and a frozen main-study analysis plan are still pending. In the pilot, return magnitude varies with company and holding period, option order is fixed within each scenario, and the neutral control has a generic background. These factors limit comparisons across cells.
+The [self-audit](audits/01_self_audit.md) records the outstanding checks. Uncertainty intervals, manual review of model comments, and a frozen main-study analysis plan are still pending. Paid answers, prompts, and the recovered manifest are now committed for response-level verification. In the pilot, return magnitude varies with company and holding period, option order is fixed within each scenario, and the neutral control has a generic background. These factors limit comparisons across cells.
 
 
 - **Caricature and demand effects:** named fictional characters may produce stereotypes or familiar scripts. Description and neutral arms help assess sensitivity.

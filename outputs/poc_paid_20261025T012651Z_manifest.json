@@ -1,0 +1,24 @@
+{
+  "run_id": "poc_paid_20261025T012651Z",
+  "is_test": false,
+  "started_utc": "2026-10-25T01:26:51+00:00",
+  "started_utc_basis": "UTC timestamp in the original run identifier (second precision; launch time)",
+  "models": [
+    "gpt-5.6-luna",
+    "claude-haiku-5-5"
+  ],
+  "n_observations": 108,
+  "edsl_version": "1.0.9",
+  "personas_file": "inputs/personas_poc.csv",
+  "scenarios_file": "inputs/scenarios_poc.csv",
+  "option_seed": 331,
+  "source": "Recovered Expected Parrot Results export from completed October pilot; no new collection.",
+  "source_csv_sha256": "56682f452544fcc684777114502fc03f051bdeb6b69b8735ec9eed9b9888cc6b",
+  "committed_csv_sha256": "3bf0bf06b01a891546bb636d484b831aa429f332a8745209f135a4bf6278f94e",
+  "omissions": [
+    "provider response envelopes",
+    "internal reasoning summaries",
+    "cache identifiers"
+  ],
+  "job_cost_usd": 0.0307
+}

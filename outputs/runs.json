@@ -1,5 +1,5 @@
 {
-  "primary_run": "poc_TEST_v0",
+  "primary_run": "poc_paid_20261025T012651Z",
   "runs": [
     {
       "run_id": "poc_TEST_v0",
@@ -9,6 +9,16 @@
         "test"
       ],
       "n_observations": 54
+    },
+    {
+      "run_id": "poc_paid_20261025T012651Z",
+      "is_test": false,
+      "started_utc": "2026-10-25T01:26:51+00:00",
+      "models": [
+        "gpt-5.6-luna",
+        "claude-haiku-5-5"
+      ],
+      "n_observations": 108
     }
   ]
 }
