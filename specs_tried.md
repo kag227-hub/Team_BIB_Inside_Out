@@ -24,3 +24,9 @@ The expanded eight-emotion, three-background, repeated/reworded experiment remai
 | ID | Date | Attempt | Outcome |
 |---|---|---|---|
 | V0-001 | 2026-11-14 | Free synthetic run `poc_TEST_v0` (EDSL test model, same 9 personas × 3 paired scenarios) through the new offline pipeline: `run_all.py` → build_dataset → poc_analyze → make_figures → dashboard | 54 rows; 100% valid; 27/27 pairs; all effects 0 by construction. Offline rebuild identical to the collector's tidy output. Plumbing check only; no behavioral inference. |
+
+## Main-study analysis plan
+
+| ID | Date | Attempt | Outcome |
+|---|---|---|---|
+| PLAN-001 | 2026-11-17 | Froze the main-study analysis plan in `ANALYSIS_PLAN.md` v1.0 (instructor audit A2, self-audit F11): primary estimands P1 (neutral DE per model) and P2 (emotion minus background-matched neutral, per model); scenario-level sign-flip test and bootstrap; Holm within P1 (2) and P2 (16); sign-flip rule across wordings; validity and failure rules. | Written after viewing the paid pilot (disclosed in the plan, Section 0). No main-study data collected. |

@@ -33,6 +33,8 @@ streamlit run dashboard/app.py         # dashboard, reads outputs/ only
 
 **Dashboard.** Deploy on [Streamlit Community Cloud](https://share.streamlit.io): New app → this repo → branch `main` → main file `dashboard/app.py` (it installs `dashboard/requirements.txt`). Paste the URL at the top of this README. Authorized reviewers with the private paid CSV can rebuild the paid run locally, then regenerate the public export with `python code/export_public_pilot.py outputs/poc_paid_20261025T012651Z_responses.csv outputs/public_paid_pilot.json`. Do not commit the private inputs or paid row-level outputs.
 
+**Analysis plan (frozen before the main run):** [ANALYSIS_PLAN.md](ANALYSIS_PLAN.md).
+
 **Self-audit:** [audits/01_self_audit.md](audits/01_self_audit.md).
 
 ## Why this question matters
