@@ -1,24 +1,28 @@
 # Team BIB: “Inside Out” Silicon Investors
 
-**📊 Live dashboard: (https://teambibinsideout-tkgtmunmsq9qkk3gjgrgdd.streamlit.app/)**
+[Open the public dashboard](https://teambibinsideout-tkgtmunmsq9qkk3gjgrgdd.streamlit.app/)
+
+Updated November 17, 2026.
 
 **FIN 331 final project · Project seed #13 · Python + EDSL**
 
 Do LLM investor personas show the **disposition effect**—a greater tendency to sell investments with gains than investments with losses—and does that tendency depend on emotion or model?
 
-We study investors inspired by the emotions in *Inside Out*: **Joy, Sadness, Anger, Fear, Disgust, Anxiety, Envy, and Embarrassment**. Each emotion is crossed with three backgrounds: novice investor, mid-career saver, and retiree. A neutral, no-emotion investor provides a reference.
+The planned full study covers investors inspired by the emotions in *Inside Out*: **Joy, Sadness, Anger, Fear, Disgust, Anxiety, Envy, and Embarrassment**. Each emotion is crossed with three backgrounds: novice investor, mid-career saver, and retiree. A neutral, no-emotion investor provides a reference.
 
-**Status:** experimental design and pipeline plan. This README does not report experimental results. Model choices, exact prompts, budget, and analysis specifications must be frozen and timestamped before the main run. If any pilot responses have already been examined, disclose them and label subsequent predictions accordingly.
+**Current status.** The paid pilot is complete. It collected 108 survey observations across two models and nine personas, producing 54 complete gain/loss pairs. The public Streamlit dashboard displays its aggregate results. The offline pipeline rebuilds the synthetic test run from committed raw files. The larger eight-emotion, three-background study is planned.
 
-**Checkpoint 1 update (October 24, 2026):** pilot collection and analysis scripts are implemented and have passed a synthetic dry run. GPT-5.6 Luna and Claude Haiku 5.5 are selected for the paid pilot; credentials and live availability still need verification. See [POC_README.md](POC_README.md), [MODEL_SELECTION.md](MODEL_SELECTION.md), and [STATUS_checkpoint1.md](STATUS_checkpoint1.md). The larger study described below remains planned.
+**Paid pilot, October 24, 2026 (ET).** GPT-5.6 Luna and Claude Haiku 5.5 evaluated Joy, Sadness, Fear, and Embarrassment in character-name and emotion-description prompts, plus a neutral control. Each persona evaluated three fictional scenarios in gain and loss versions. The recorded job charge was $0.0307. The run ID is `poc_paid_20261025T012651Z` because collection occurred on October 25 in UTC. See [Checkpoint 1](STATUS_checkpoint1.md), [pilot instructions](POC_README.md), and [model selection](MODEL_SELECTION.md).
+
+The pilot has three matched pairs per model and persona cell. For Embarrassment, the gain-minus-loss gap changes from −66.7 to +33.3 percentage points across prompt arms for GPT-5.6 Luna, and from −33.3 to +66.7 for Claude Haiku 5.5. With so few pairs, these estimates are exploratory. Confidence intervals, additional wording checks, and the expanded study remain to be completed.
 
 ## How to run (Checkpoint 2 · v0)
 
 ```bash
 python -m pip install -r requirements.txt
-python run_all.py                      # rebuilds every output from data/raw/, no API calls
+python run_all.py                     # rebuilds derived files for raw runs present locally
 python -m unittest discover -s tests   # offline checks
-streamlit run dashboard/app.py         # dashboard, reads outputs/ only
+streamlit run dashboard/app.py        # displays the saved public paid-pilot aggregates
 ```
 
 | Step | File | Reads → writes |
@@ -31,7 +35,13 @@ streamlit run dashboard/app.py         # dashboard, reads outputs/ only
 
 **Data.** The public dashboard displays counts and sell rates from the October paid pilot (108 model responses, 54 matched gain/loss pairs). The committed [public export](outputs/public_paid_pilot.json) contains counts by model, emotion, and prompt arm only. Paid response rows, individual prompts, model comments, and usage records stay private for course verification. The committed `poc_TEST_v0` inputs remain a separate synthetic pipeline check; `python run_all.py` rebuilds that check offline and does not overwrite the public paid export.
 
-**Dashboard.** Deploy on [Streamlit Community Cloud](https://share.streamlit.io): New app → this repo → branch `main` → main file `dashboard/app.py` (it installs `dashboard/requirements.txt`). Paste the URL at the top of this README. Authorized reviewers with the private paid CSV can rebuild the paid run locally, then regenerate the public export with `python code/export_public_pilot.py outputs/poc_paid_20261025T012651Z_responses.csv outputs/public_paid_pilot.json`. Do not commit the private inputs or paid row-level outputs.
+**Rebuilding the paid export.** Reviewers with the private raw artifacts can place them in `data/raw/poc_paid_20261025T012651Z/`, run `python run_all.py`, then regenerate the public counts with the command below. A public checkout can rerun the synthetic pipeline and display the committed paid counts. Rechecking the paid response parsing, exact prompts, and costs requires the private artifacts.
+
+```bash
+python code/export_public_pilot.py outputs/poc_paid_20261025T012651Z_responses.csv outputs/public_paid_pilot.json
+```
+
+**Dashboard hosting.** The published app uses branch `main`, entry point `dashboard/app.py`, and dependencies in `dashboard/requirements.txt`. It reads `outputs/public_paid_pilot.json`. The Intro, Methodology, Results, and Explore pages show pilot counts, sell rates, and gaps, with model, emotion, and prompt-arm filters.
 
 **Self-audit:** [audits/01_self_audit.md](audits/01_self_audit.md).
 
@@ -41,9 +51,9 @@ A fintech designing investor nudges could use evidence about how simulated emoti
 
 ## Personas and predictions
 
-The primary design contains **24 emotional personas + 1 neutral control = 25 personas**. The neutral control has a fixed, generic investor background; it is not three additional personas. Background-matched neutral controls and a rational-economist control are optional extensions and increase the budget.
+The planned full design contains **24 emotional personas + 1 neutral control = 25 personas**. The neutral control has a fixed, generic investor background; it is not three additional personas. Background-matched neutral controls and a rational-economist control are optional extensions and increase the budget.
 
-These are proposed predictions to register before running, not findings:
+These predictions guide the planned main study. The pilot has already been examined. Before the main run, timestamp the hypotheses, comparisons, failure rules, and budget, and identify any predictions changed after the pilot.
 
 | Emotion | Predicted behavior |
 |---|---|
@@ -65,7 +75,7 @@ The outcome includes both gain-side and loss-side sell rates: some predictions c
 
 Keep the background and all financial facts identical across arms. Match emotional content as closely as possible and save the exact texts. This comparison tests sensitivity to character cues, although wording differences prevent a perfectly isolated test of psychology.
 
-## Experimental design
+## Planned main-study design
 
 - Generate **20 base scenarios** using fictional companies with no real ticker, news, or identifiable historical event.
 - Each scenario has a **gain and loss version**, differing only in the sign of the return since purchase: for example, +10% versus −10%.
@@ -81,9 +91,9 @@ Keep the background and all financial facts identical across arms. Match emotion
 
 Do not tell experimental personas the hypotheses, the term “disposition effect,” or Odean’s findings. An optional rational-economist control should receive a decision rule based on future payoffs, not the expected experimental answer.
 
-## Outcomes and analysis
+## Outcomes and analysis plan
 
-For each persona, model, prompt arm, and wording:
+The implemented analysis reports matched sell rates and gaps. The expanded background, wording, and uncertainty comparisons below are planned. For each persona, model, prompt arm, and wording:
 
 ```text
 gain_sell_rate = valid sell decisions in gain cases / valid gain decisions
@@ -108,7 +118,7 @@ Source: Terrance Odean, *Are Investors Reluctant to Realize Their Losses?*, Jour
 
 Odean uses realized and paper opportunities in brokerage records; we use prompted hypothetical decisions. Our sell-rate gap is an experimental analogue, not an exact replication of the brokerage estimator. Compare magnitudes with that qualification.
 
-## Planned EDSL pipeline
+## Planned main-study EDSL pipeline
 
 **These are the main-study files.** The pilot versions of collection, dataset building, analysis, `run_all.py` and the dashboard now exist (see "How to run" above); the main-study tables and design expansion remain planned. EDSL is pinned to 1.0.9.
 
@@ -120,8 +130,8 @@ Odean uses realized and paper opportunities in brokerage records; we use prompte
 | `code/build_design.py` | Expand personas × scenarios × gain/loss × models × arms × wordings × repeats; save seeded option order and prompt hashes. |
 | `code/run_survey.py` | Build EDSL agents/scenarios and a sell/hold plus rating survey; save rendered prompts, raw responses, usage, and failures. |
 | `code/analyze.py` | Validate keys/pairs, normalize answers, compute component rates and gaps, and produce intervals and hand-check tables from saved data. |
-| `run_all.py` | Rebuild analysis outputs from committed raw responses without paid API calls by default. |
-| `app.py` | Read saved outputs and show estimates plus response-level drill-down. |
+| `run_all.py` (implemented) | Rebuild derived outputs for raw runs present locally. The public checkout includes the synthetic run. |
+| `dashboard/app.py` (implemented) | Display paid-pilot aggregate counts and sell rates. Response-level drill-down is a planned extension. |
 | `specs_tried.md` | Append-only record of every tested persona, wording, model, specification, pilot, and deviation, including null results. |
 | `cost_log.csv` | Estimated and actual tokens/spend, call counts, cache hits, retries, pricing source/date, and run ID. |
 
@@ -179,11 +189,13 @@ Include repeated persona/system text, question overhead, any second-question con
 
 ## Dashboard and reproducibility
 
-The dashboard will show an **emotion × model grid** of disposition effects and confidence intervals, with filters for background, wording, and prompt arm. Each cell opens the underlying prompts and raw responses. Show the neutral-control estimate as a reference line within each model and arm, plus sample sizes and failure rates. Keep optional rational-control results distinct.
+The current dashboard displays paid-pilot summary tables and filtered gain/loss sell-rate charts. Confidence intervals, background and wording filters, response-level drill-down, and a neutral-control reference line are planned extensions.
+
+The planned dashboard will show an **emotion × model grid** of disposition effects and confidence intervals, with filters for background, wording, and prompt arm. Each cell opens the underlying prompts and raw responses. Show the neutral-control estimate as a reference line within each model and arm, plus sample sizes and failure rates. Keep optional rational-control results distinct.
 
 Before the final submission:
 
-- Pin Python/dependency versions and document exact setup and offline rerun commands once implemented.
+- Retain pinned dependencies and the documented offline commands, and record the supported Python version.
 - Commit prompt templates, design tables, manifests, provenance, run dates, and raw responses sufficient for analysis without new API calls.
 - Assert uniqueness using the full key; check expected cell counts and incomplete pairs.
 - Compare rendered paired prompts and assert that only the signed return changes.
@@ -195,6 +207,9 @@ Before the final submission:
 - Have every teammate explain the design, parsing, estimators, uncertainty, and limitations.
 
 ## Threats to validity
+
+The [self-audit](audits/01_self_audit.md) records the outstanding checks. Paid response-level verification, uncertainty intervals, manual review of model comments, and a frozen main-study analysis plan are still pending. In the pilot, return magnitude varies with company and holding period, option order is fixed within each scenario, and the neutral control has a generic background. These factors limit comparisons across cells.
+
 
 - **Caricature and demand effects:** named fictional characters may produce stereotypes or familiar scripts. Description and neutral arms help assess sensitivity.
 - **Training leakage:** models may know the disposition-effect literature even when companies are fictional. Hiding the hypotheses reduces explicit cues but cannot remove prior knowledge.
