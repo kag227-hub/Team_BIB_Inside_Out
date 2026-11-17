@@ -27,6 +27,7 @@ streamlit run dashboard/app.py         # dashboard, reads outputs/ only
 | 2. Build dataset | `code/build_dataset.py` | `data/raw/<run_id>/raw_results.csv` → `outputs/<run_id>_responses.csv` |
 | 3. Analyze | `code/poc_analyze.py` | → `*_feasibility.md`, `*_rates.csv`, `*_cost_projection.csv` |
 | 4. Table + figure | `code/make_figures.py` | → `*_summary_table.csv/.md`, `*_disposition_by_persona.png` |
+| 4b. Cue ablation (audit A3; ablation runs only) | `code/cue_ablation.py` | → `*_cue_ablation.csv/.md`: disposition effect with and without each demand cue |
 | 5. Dashboard | `dashboard/app.py` | `outputs/public_paid_pilot.json` (paid pilot aggregates only) |
 
 **Data.** The public dashboard displays counts and sell rates from the October paid pilot (108 model responses, 54 matched gain/loss pairs). The committed [public export](outputs/public_paid_pilot.json) contains counts by model, emotion, and prompt arm only. Paid response rows, individual prompts, model comments, and usage records stay private for course verification. The committed `poc_TEST_v0` inputs remain a separate synthetic pipeline check; `python run_all.py` rebuilds that check offline and does not overwrite the public paid export.
@@ -198,7 +199,7 @@ Before the final submission:
 
 ## Threats to validity
 
-- **Caricature and demand effects:** named fictional characters may produce stereotypes or familiar scripts. Description and neutral arms help assess sensitivity.
+- **Caricature and demand effects:** named fictional characters may produce stereotypes or familiar scripts. Description and neutral arms help assess sensitivity. Two prompt cues, the "past price moves say nothing about its future" sentence and EDSL's "Do not break character" instruction, are tested by switching them off (ANALYSIS_PLAN.md, S8; `python code/poc_run.py --ablation`). The word "fictional" stays and is a remaining cue.
 - **Training leakage:** models may know the disposition-effect literature even when companies are fictional. Hiding the hypotheses reduces explicit cues but cannot remove prior knowledge.
 - **Prompt sensitivity:** wording, question sequence, and option order may change the answer. Save them and report robustness results, including sign reversals.
 - **Limited external validity:** hypothetical LLM choices lack real money, consequences, and human emotional experience.

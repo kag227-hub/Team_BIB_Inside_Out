@@ -2,6 +2,7 @@
 
 **Team BIB · Inside Out Silicon Investors · FIN 331 · Project seed #13**
 **Plan version:** 1.0 · **Written:** November 17, 2026 · **Responds to:** instructor audit finding A2 (and self-audit F11)
+**v1.1 (November 17, 2026, before any main-study collection):** adds S8, the demand-cue ablation (instructor audit A3, self-audit F6). Nothing else changed.
 
 This file fixes the primary estimands, tests, multiple-comparison adjustment, failure rules and sign-flip rule **before** any main-study response is collected. Its commit date on `main` must come before `started_utc` in the main run's manifest (`data/raw/<main_run_id>/manifest.json`). Any later change is a deviation: it gets a new plan version, a dated entry in `specs_tried.md`, and the results it touches are labeled exploratory.
 
@@ -104,6 +105,21 @@ These have no family-wise control. Where several are tested together we report B
 - **S5 · Without recitation:** P1 and P2 re-estimated after dropping flagged comments.
 - **S6 · Model contrast:** DE<sub>neutral</sub> for Luna minus for Haiku.
 - **S7 · Decision–rating agreement:** share of Sell decisions with a rating ≥ 5 and of Hold decisions with a rating ≤ 3 (self-audit F10).
+- **S8 · Demand-cue ablation (audit A3, self-audit F6).** Two cues in the prompt may push the answer in a known direction. "Past price moves say nothing about its future" (in every scenario) points toward the rational, no-disposition answer. EDSL's default instruction "You are answering questions as if you were a human. Do not break character." (prepended to every persona) may push toward a stereotyped human answer. We switch each cue off in a 2 × 2:
+
+  | Cell | `cue_past_moves` | `cue_system_line` | What the model sees |
+  |---|:-:|:-:|---|
+  | Both cues (= main design) | 1 | 1 | Unchanged prompt |
+  | No past-moves sentence | 0 | 1 | Scenario ends "…the same as the overall market's." The rest of the scenario is identical. |
+  | No system line | 1 | 0 | EDSL instruction overridden with an empty string, so the system prompt is the persona text alone |
+  | No cues | 0 | 0 | Both changes |
+
+  - **Personas:** the mid-career neutral control and Embarrassment (description arm, mid-career). Embarrassment is the emotion whose pilot sign flipped across arms. The description arm keeps the film name out, so it is not a third role-play cue.
+  - **Size:** all 20 base scenarios, wording w1, 3 repeats, both models. The both-cues cell is already in the main design; the three new cells add 2 personas × 20 scenarios × 2 versions × 3 cells × 3 repeats × 2 models = **1,440 observations** (about $0.40 at the pilot's cost per observation).
+  - **Estimates, per model and per persona:** DE in each cell; the effect of removing each cue (DE without minus DE with, averaged over the other cue's two levels); and their interaction. Positive means the disposition effect is larger without the cue. Each contrast is averaged within base scenario, with a 95% percentile bootstrap over base scenarios (B = 10,000, seed 331), as in Section 3.
+  - **Reporting:** the full 2 × 2 table, including nulls, next to P1 and P2. If removing a cue changes a primary estimate's sign, we say so where that estimate is reported.
+  - **Not ablated:** the word "fictional" stays. It keeps models from pulling real-ticker knowledge into the decision, so we disclose it as a remaining cue rather than remove it.
+  - **Code:** `python code/poc_run.py --ablation` collects the cells (`--test` for a free dry run); `code/cue_ablation.py` computes the estimates; `run_all.py` runs it for any run whose manifest says `design: cue_ablation`. Free dry run: `poc_TEST_ablation_v0`.
 
 ## 7. Deviations
 

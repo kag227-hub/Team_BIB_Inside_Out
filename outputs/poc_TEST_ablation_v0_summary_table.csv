@@ -1,0 +1,3 @@
+model_id,emotion,prompt_arm,persona_id,n_gain,n_loss,gain_sell_rate,loss_sell_rate,disposition_effect_pp
+test,Embarrassment,emotion_description,embarrassment_mid_desc,3,3,0.0,0.0,0.0
+test,Neutral,control,neutral_generic,3,3,0.0,0.0,0.0

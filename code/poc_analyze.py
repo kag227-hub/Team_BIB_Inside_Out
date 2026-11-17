@@ -24,7 +24,11 @@ manifest_path = out / f"{stem}_manifest.json"
 manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
 is_test = bool(manifest.get("is_test", stem.startswith("poc_TEST_")))
 
-key = ["run_id", "persona_id", "scenario_id", "version", "model_id", "repeat"]
+CUE_COLS = ["cue_past_moves", "cue_system_line"]  # audit A3; absent in older files = both cues on
+for c in CUE_COLS:
+    if c not in df:
+        df[c] = 1
+key = ["run_id", "persona_id", "scenario_id", "version", "model_id", "repeat"] + CUE_COLS
 assert not df.duplicated(key).any(), "duplicate analysis keys"
 assert not df[key].isna().any().any(), "missing analysis keys"
 assert df["run_id"].nunique() == 1, "analyze one run at a time"
@@ -41,14 +45,18 @@ valid = (df.groupby(["model_id", "prompt_arm"])
 lines += ["## 1. Valid answers (share of rows)", "", valid.to_markdown(), ""]
 
 # 2. Pair completeness: both gain and loss valid for the same persona x scenario x model
-pair_key = ["persona_id", "scenario_id", "model_id", "repeat"]
+pair_key = ["persona_id", "scenario_id", "model_id", "repeat"] + CUE_COLS
 pairs = df.pivot_table(index=pair_key, columns="version", values="sell_valid", aggfunc="first")
 if manifest:
     root = Path(__file__).resolve().parents[1]
     personas = pd.read_csv(root / manifest["personas_file"])
+    persona_ids = manifest.get("persona_ids", personas.persona_id.tolist())
     scenarios = pd.read_csv(root / manifest["scenarios_file"])
-    expected = pd.MultiIndex.from_product(
-        [personas.persona_id, scenarios.scenario_id, manifest["models"], [0]], names=pair_key)
+    cells = manifest.get("cue_cells", [dict(cue_past_moves=1, cue_system_line=1)])
+    expected = pd.MultiIndex.from_tuples(
+        [(p, s, m, 0, c["cue_past_moves"], c["cue_system_line"])
+         for p in persona_ids for s in scenarios.scenario_id for m in manifest["models"] for c in cells],
+        names=pair_key)
     pairs = pairs.reindex(expected)
 pairs = pairs.reindex(columns=["gain", "loss"]).fillna(False).astype(bool)
 complete = pairs["gain"] & pairs["loss"]
@@ -70,7 +78,7 @@ lines += ["## 3. Comment flags (share of rows)", "", flag_tbl.to_markdown(), "",
 
 # 4. Sell rates and disposition effect (gain sell rate - loss sell rate). Tiny n: pipeline check only.
 v = df[df["sell_valid"] & pd.MultiIndex.from_frame(df[pair_key]).isin(complete[complete].index)]
-rates = (v.groupby(["model_id", "persona_id", "emotion", "prompt_arm", "version"])["sell"]
+rates = (v.groupby(["model_id", "persona_id", "emotion", "prompt_arm"] + CUE_COLS + ["version"])["sell"]
           .agg(["mean", "size"]).unstack("version"))
 rates.columns = [f"{stat}_{ver}" for stat, ver in rates.columns]
 rates = rates.rename(columns={"mean_gain": "gain_sell_rate", "mean_loss": "loss_sell_rate",

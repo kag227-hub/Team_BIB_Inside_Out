@@ -23,7 +23,10 @@ ROOT = Path(__file__).resolve().parents[1]
 RAW_DIR, OUTPUTS = ROOT / "data" / "raw", ROOT / "outputs"
 
 SELL, HOLD = "Sell the position", "Hold the position"
-KEY = ["run_id", "persona_id", "scenario_id", "version", "model_id", "repeat"]
+# Demand-cue factors (audit A3). Runs collected before the ablation had both cues on, so a
+# missing column means 1.
+CUE_COLS = ["cue_past_moves", "cue_system_line"]
+KEY = ["run_id", "persona_id", "scenario_id", "version", "model_id", "repeat"] + CUE_COLS
 
 
 def _options(x):
@@ -36,6 +39,9 @@ def _options(x):
 def tidy_from_raw(raw: pd.DataFrame, run_id: str, is_test: bool, started_utc: str) -> pd.DataFrame:
     def col(name):
         return raw[name] if name in raw.columns else pd.NA
+
+    def cue(name):
+        return raw[name].astype(int) if name in raw.columns else 1
 
     tidy = pd.DataFrame({
         "run_id": run_id,
@@ -50,6 +56,8 @@ def tidy_from_raw(raw: pd.DataFrame, run_id: str, is_test: bool, started_utc: st
         "signed_return_pct": col("scenario.signed_return_pct"),
         "abs_return_pct": col("scenario.abs_return_pct"),
         "prompt_hash": col("scenario.prompt_hash"),
+        "cue_past_moves": cue("scenario.cue_past_moves"),
+        "cue_system_line": cue("agent.cue_system_line"),
         "model_id": col("model.model"),
         "repeat": 0,
         "decision_raw": col("answer.decision"),
