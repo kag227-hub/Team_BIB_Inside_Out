@@ -4,6 +4,8 @@
 
 Updated November 17, 2026.
 
+Read the [proposal](PROPOSAL.md) and [project status](STATUS.md) for the research motivation, completed pilot, and remaining work.
+
 **FIN 331 final project · Project seed #13 · Python + EDSL**
 
 Do LLM investor personas show the **disposition effect**—a greater tendency to sell investments with gains than investments with losses—and does that tendency depend on emotion or model?
@@ -12,7 +14,7 @@ The planned full study covers investors inspired by the emotions in *Inside Out*
 
 **Current status.** The paid pilot is complete. It collected 108 survey observations across two models and nine personas, producing 54 complete gain/loss pairs. The public Streamlit dashboard displays its aggregate results. The offline pipeline rebuilds both paid and synthetic runs from committed raw files. The larger eight-emotion, three-background study is planned.
 
-**Paid pilot, October 24, 2026 (ET).** GPT-5.6 Luna and Claude Haiku 5.5 evaluated Joy, Sadness, Fear, and Embarrassment in character-name and emotion-description prompts, plus a neutral control. Each persona evaluated three fictional scenarios in gain and loss versions. The recorded job charge was $0.0307. The run ID is `poc_paid_20261025T012651Z` because collection occurred on October 25 in UTC. See [Checkpoint 1](STATUS_checkpoint1.md), [pilot instructions](POC_README.md), and [model selection](MODEL_SELECTION.md).
+**Paid pilot, October 24, 2026 (ET).** GPT-5.6 Luna and Claude Haiku 5.5 evaluated Joy, Sadness, Fear, and Embarrassment in character-name and emotion-description prompts, plus a neutral control. Each persona evaluated three fictional scenarios in gain and loss versions. The recorded job charge was $0.0307. The run ID is `poc_paid_20261025T012651Z` because collection occurred on October 25 in UTC. See [Checkpoint 1](STATUS.md), [pilot instructions](POC_README.md), and [model selection](MODEL_SELECTION.md).
 
 The pilot has three matched pairs per model and persona cell. For Embarrassment, the gain-minus-loss gap changes from −66.7 to +33.3 percentage points across prompt arms for GPT-5.6 Luna, and from −33.3 to +66.7 for Claude Haiku 5.5. With so few pairs, these estimates are exploratory. Confidence intervals, additional wording checks, and the expanded study remain to be completed.
 

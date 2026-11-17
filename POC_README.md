@@ -29,7 +29,7 @@ The runner prints its planning estimate and EDSL's account-based estimate before
 
 Inspect at least ten comments per model for refusals, character breaks, and textbook recitation. Check truncation, saved prompts, and one independently calculated pair. Reconcile usage with account billing. Regex flags alone cannot replace human review.
 
-Add raw EDSL results, raw CSV, prompts, tidy responses, manifest, saved estimate, and generated reports to the PR after checking for credentials. Update **STATUS_checkpoint1.md** with measured model IDs, validity, completeness, failures, costs, and hand-check findings. Keep the PR a draft until paid-run evidence is present.
+Add raw EDSL results, raw CSV, prompts, tidy responses, manifest, saved estimate, and generated reports to the PR after checking for credentials. Update **STATUS.md** with measured model IDs, validity, completeness, failures, costs, and hand-check findings. Keep the PR a draft until paid-run evidence is present.
 
 The pilot uses nine personas (four emotions × two arms + neutral), three scenarios, two gain/loss versions, and two models: 108 observations and 54 pairs. Seed 331 randomizes option order across scenarios, preserving order within each pair. Fresh in-memory caching and disabled remote caching prevent prior-run reuse. Manifests record input hashes and effective model settings.
 
@@ -40,5 +40,5 @@ The pilot uses nine personas (four emotions × two arms + neutral), three scenar
 | `inputs/models_poc.csv` | Selected settings and price provenance |
 | `code/poc_run.py` | Collection and raw/tidy artifacts |
 | `code/poc_analyze.py` | Validity, pairing, rates, cost projections, hand check |
-| `STATUS_checkpoint1.md` | Executed evidence and outstanding work |
+| `STATUS.md` | Executed evidence and outstanding work |
 | `specs_tried.md` | Specifications, failures, and deviations |
