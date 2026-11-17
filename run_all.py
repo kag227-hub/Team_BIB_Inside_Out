@@ -8,7 +8,8 @@ For each run folder in data/raw/ that contains raw_results.csv:
   2. code/build_dataset.py  raw EDSL results -> outputs/<run_id>_responses.csv
   3. code/poc_analyze.py    validity, matched pairs, sell rates, cost -> *_feasibility.md, *_rates.csv
   4. code/make_figures.py   headline table + figure -> *_summary_table.*, *_disposition_by_persona.png
-Then writes outputs/runs.json, which the dashboard reads to know which runs exist.
+Then writes outputs/runs.json and regenerates the public dashboard export from
+the paid run identified by the committed export's run_id.
 
 Collecting NEW responses is a separate, deliberate step that costs money:
     python code/poc_run.py --run-id <new_id>       (paid; asks for confirmation)
@@ -48,11 +49,18 @@ def main() -> None:
                             started_utc=manifest["started_utc"], models=manifest["models"],
                             n_observations=manifest["n_observations"]))
 
-    # The dashboard shows a real (paid) run by default; synthetic runs only if nothing else exists.
+    # Keep the public export tied to its explicit run, even when other runs exist.
+    export_path = OUTPUTS / "public_paid_pilot.json"
+    if export_path.exists():
+        export_run = json.loads(export_path.read_text(encoding="utf-8"))["run_id"]
+        if not any(r["run_id"] == export_run and not r["is_test"] for r in summary):
+            raise SystemExit(f"Missing paid raw run required by public export: {export_run}")
+        step("code/export_public_pilot.py", f"outputs/{export_run}_responses.csv", str(export_path))
+
     real = [r for r in summary if not r["is_test"]]
     primary = (real or summary)[-1]["run_id"]
     (OUTPUTS / "runs.json").write_text(json.dumps(dict(primary_run=primary, runs=summary), indent=2))
-    print(f"\nDone. {len(runs)} run(s) rebuilt. Dashboard default run: {primary}")
+    print(f"\nDone. {len(runs)} run(s) rebuilt. Primary analysis run: {primary}")
     if not real:
         print("WARNING: only synthetic runs are in data/raw/. Add the paid pilot's raw files "
               "(see README) to get behavioral results.")

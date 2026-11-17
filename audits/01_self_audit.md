@@ -12,6 +12,12 @@
 > filled in by Ayushi (from [PR #5](https://github.com/kag227-hub/Team_BIB_Inside_Out/pull/5)), with the
 > evidence updated for this pipeline.
 
+## A1 resolution — November 17, 2026
+
+The paid run's saved EDSL Results CSV, rendered prompts, and recovered manifest are now included under `data/raw/poc_paid_20261025T012651Z/`. Every retained CSV field matches the original download across all 108 rows. The manifest discloses omitted provider envelopes, internal reasoning summaries, and cache identifiers, and preserves original/public file hashes. The binary `.ep` artifact is unavailable locally.
+
+`run_all.py` now regenerates the paid public export from its explicit run ID and fails if that raw run is absent. This resolves the raw-data and dashboard-export issues described in F1, F2, and F17 below. The earlier findings and proposed transfer steps below describe the pre-fix state. Manual comment review, uncertainty estimates, and main-study registration remain open.
+
 ## 1. What the review flagged, and which findings are real
 
 | # | Finding | Real? | Evidence |
