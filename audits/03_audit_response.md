@@ -31,7 +31,7 @@ _To be completed. Plan file: [ANALYSIS_PLAN.md](../ANALYSIS_PLAN.md)._
 
 3. **Collection.** `python code/poc_run.py --ablation` builds the four cells. The gain/loss check still asserts that paired texts differ only in the sign of the return. A new assertion checks that the clause is present exactly when `cue_past_moves = 1`. Option order is drawn once per base scenario, so it does not change across cue cells. The manifest records `design`, `persona_ids` and `cue_cells`.
 
-4. **Analysis.** `cue_past_moves` and `cue_system_line` are now part of the analysis key in `build_dataset.py` and `poc_analyze.py`. Older runs default to 1/1, so the existing runs rebuild with the same numbers. The new script `code/cue_ablation.py` reports the following for each model and persona, and pooled across personas:
+4. **Analysis.** `cue_past_moves` and `cue_system_line` are now part of the analysis key in `build_dataset.py` and `poc_analyze.py`. Older runs default to 1/1, so the existing runs, including the paid pilot, rebuild with the same numbers; their output files only gain the two cue columns. `outputs/public_paid_pilot.json` regenerates byte-identical. The new script `code/cue_ablation.py` reports the following for each model and persona, and pooled across personas:
    - the disposition effect (DE) in each cell;
    - the effect of removing each cue (DE without the cue minus DE with it, averaged over the other cue);
    - the interaction between the two cues.
@@ -45,7 +45,7 @@ _To be completed. Plan file: [ANALYSIS_PLAN.md](../ANALYSIS_PLAN.md)._
    - Older runs default to both cues on.
    - On a known fixture, the contrast arithmetic gives the expected values.
 
-   The full suite passes, 13 of 13.
+   The full suite passes, 14 of 14, including the paid-export test from A1.
 
 **Not ablated (disclosed).** The word "fictional" stays in every scenario, and the README's threats-to-validity section names it as a remaining cue. It keeps the models from bringing in knowledge of real tickers.
 
