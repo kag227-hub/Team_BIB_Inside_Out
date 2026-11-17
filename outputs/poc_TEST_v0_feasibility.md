@@ -28,17 +28,17 @@ Read 10 comments per model by hand too; regex flags miss things.
 
 ## 4. Sell rates (complete pairs only; at most 3 pairs per cell; exploratory)
 
-|                                                                            |   gain_sell_rate |   loss_sell_rate |   n_gain |   n_loss |   disposition_effect_pp |
-|:---------------------------------------------------------------------------|-----------------:|-----------------:|---------:|---------:|------------------------:|
-| ('test', 'embarrassment_mid_desc', 'Embarrassment', 'emotion_description') |                0 |                0 |        3 |        3 |                       0 |
-| ('test', 'embarrassment_mid_name', 'Embarrassment', 'character_name')      |                0 |                0 |        3 |        3 |                       0 |
-| ('test', 'fear_mid_desc', 'Fear', 'emotion_description')                   |                0 |                0 |        3 |        3 |                       0 |
-| ('test', 'fear_mid_name', 'Fear', 'character_name')                        |                0 |                0 |        3 |        3 |                       0 |
-| ('test', 'joy_mid_desc', 'Joy', 'emotion_description')                     |                0 |                0 |        3 |        3 |                       0 |
-| ('test', 'joy_mid_name', 'Joy', 'character_name')                          |                0 |                0 |        3 |        3 |                       0 |
-| ('test', 'neutral_generic', 'Neutral', 'control')                          |                0 |                0 |        3 |        3 |                       0 |
-| ('test', 'sadness_mid_desc', 'Sadness', 'emotion_description')             |                0 |                0 |        3 |        3 |                       0 |
-| ('test', 'sadness_mid_name', 'Sadness', 'character_name')                  |                0 |                0 |        3 |        3 |                       0 |
+|                                                                                  |   gain_sell_rate |   loss_sell_rate |   n_gain |   n_loss |   disposition_effect_pp |
+|:---------------------------------------------------------------------------------|-----------------:|-----------------:|---------:|---------:|------------------------:|
+| ('test', 'embarrassment_mid_desc', 'Embarrassment', 'emotion_description', 1, 1) |                0 |                0 |        3 |        3 |                       0 |
+| ('test', 'embarrassment_mid_name', 'Embarrassment', 'character_name', 1, 1)      |                0 |                0 |        3 |        3 |                       0 |
+| ('test', 'fear_mid_desc', 'Fear', 'emotion_description', 1, 1)                   |                0 |                0 |        3 |        3 |                       0 |
+| ('test', 'fear_mid_name', 'Fear', 'character_name', 1, 1)                        |                0 |                0 |        3 |        3 |                       0 |
+| ('test', 'joy_mid_desc', 'Joy', 'emotion_description', 1, 1)                     |                0 |                0 |        3 |        3 |                       0 |
+| ('test', 'joy_mid_name', 'Joy', 'character_name', 1, 1)                          |                0 |                0 |        3 |        3 |                       0 |
+| ('test', 'neutral_generic', 'Neutral', 'control', 1, 1)                          |                0 |                0 |        3 |        3 |                       0 |
+| ('test', 'sadness_mid_desc', 'Sadness', 'emotion_description', 1, 1)             |                0 |                0 |        3 |        3 |                       0 |
+| ('test', 'sadness_mid_name', 'Sadness', 'character_name', 1, 1)                  |                0 |                0 |        3 |        3 |                       0 |
 
 ## 5. Cost (actual) and projection to the full design
 

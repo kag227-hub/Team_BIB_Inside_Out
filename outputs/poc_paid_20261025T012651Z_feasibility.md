@@ -32,26 +32,26 @@ Read 10 comments per model by hand too; regex flags miss things.
 
 ## 4. Sell rates (complete pairs only; at most 3 pairs per cell; exploratory)
 
-|                                                                                        |   gain_sell_rate |   loss_sell_rate |   n_gain |   n_loss |   disposition_effect_pp |
-|:---------------------------------------------------------------------------------------|-----------------:|-----------------:|---------:|---------:|------------------------:|
-| ('claude-haiku-5-5', 'embarrassment_mid_desc', 'Embarrassment', 'emotion_description') |            0.667 |            0     |        3 |        3 |                  66.667 |
-| ('claude-haiku-5-5', 'embarrassment_mid_name', 'Embarrassment', 'character_name')      |            0.333 |            0.667 |        3 |        3 |                 -33.333 |
-| ('claude-haiku-5-5', 'fear_mid_desc', 'Fear', 'emotion_description')                   |            1     |            1     |        3 |        3 |                   0     |
-| ('claude-haiku-5-5', 'fear_mid_name', 'Fear', 'character_name')                        |            1     |            1     |        3 |        3 |                   0     |
-| ('claude-haiku-5-5', 'joy_mid_desc', 'Joy', 'emotion_description')                     |            0     |            0.333 |        3 |        3 |                 -33.333 |
-| ('claude-haiku-5-5', 'joy_mid_name', 'Joy', 'character_name')                          |            0     |            0     |        3 |        3 |                   0     |
-| ('claude-haiku-5-5', 'neutral_generic', 'Neutral', 'control')                          |            0     |            0     |        3 |        3 |                   0     |
-| ('claude-haiku-5-5', 'sadness_mid_desc', 'Sadness', 'emotion_description')             |            1     |            0.667 |        3 |        3 |                  33.333 |
-| ('claude-haiku-5-5', 'sadness_mid_name', 'Sadness', 'character_name')                  |            0.333 |            0     |        3 |        3 |                  33.333 |
-| ('gpt-5.6-luna', 'embarrassment_mid_desc', 'Embarrassment', 'emotion_description')     |            1     |            0.667 |        3 |        3 |                  33.333 |
-| ('gpt-5.6-luna', 'embarrassment_mid_name', 'Embarrassment', 'character_name')          |            0.333 |            1     |        3 |        3 |                 -66.667 |
-| ('gpt-5.6-luna', 'fear_mid_desc', 'Fear', 'emotion_description')                       |            0.667 |            1     |        3 |        3 |                 -33.333 |
-| ('gpt-5.6-luna', 'fear_mid_name', 'Fear', 'character_name')                            |            0.667 |            0.667 |        3 |        3 |                   0     |
-| ('gpt-5.6-luna', 'joy_mid_desc', 'Joy', 'emotion_description')                         |            0     |            0.667 |        3 |        3 |                 -66.667 |
-| ('gpt-5.6-luna', 'joy_mid_name', 'Joy', 'character_name')                              |            0.333 |            1     |        3 |        3 |                 -66.667 |
-| ('gpt-5.6-luna', 'neutral_generic', 'Neutral', 'control')                              |            0.667 |            0.333 |        3 |        3 |                  33.333 |
-| ('gpt-5.6-luna', 'sadness_mid_desc', 'Sadness', 'emotion_description')                 |            1     |            1     |        3 |        3 |                   0     |
-| ('gpt-5.6-luna', 'sadness_mid_name', 'Sadness', 'character_name')                      |            0.333 |            0.667 |        3 |        3 |                 -33.333 |
+|                                                                                              |   gain_sell_rate |   loss_sell_rate |   n_gain |   n_loss |   disposition_effect_pp |
+|:---------------------------------------------------------------------------------------------|-----------------:|-----------------:|---------:|---------:|------------------------:|
+| ('claude-haiku-5-5', 'embarrassment_mid_desc', 'Embarrassment', 'emotion_description', 1, 1) |            0.667 |            0     |        3 |        3 |                  66.667 |
+| ('claude-haiku-5-5', 'embarrassment_mid_name', 'Embarrassment', 'character_name', 1, 1)      |            0.333 |            0.667 |        3 |        3 |                 -33.333 |
+| ('claude-haiku-5-5', 'fear_mid_desc', 'Fear', 'emotion_description', 1, 1)                   |            1     |            1     |        3 |        3 |                   0     |
+| ('claude-haiku-5-5', 'fear_mid_name', 'Fear', 'character_name', 1, 1)                        |            1     |            1     |        3 |        3 |                   0     |
+| ('claude-haiku-5-5', 'joy_mid_desc', 'Joy', 'emotion_description', 1, 1)                     |            0     |            0.333 |        3 |        3 |                 -33.333 |
+| ('claude-haiku-5-5', 'joy_mid_name', 'Joy', 'character_name', 1, 1)                          |            0     |            0     |        3 |        3 |                   0     |
+| ('claude-haiku-5-5', 'neutral_generic', 'Neutral', 'control', 1, 1)                          |            0     |            0     |        3 |        3 |                   0     |
+| ('claude-haiku-5-5', 'sadness_mid_desc', 'Sadness', 'emotion_description', 1, 1)             |            1     |            0.667 |        3 |        3 |                  33.333 |
+| ('claude-haiku-5-5', 'sadness_mid_name', 'Sadness', 'character_name', 1, 1)                  |            0.333 |            0     |        3 |        3 |                  33.333 |
+| ('gpt-5.6-luna', 'embarrassment_mid_desc', 'Embarrassment', 'emotion_description', 1, 1)     |            1     |            0.667 |        3 |        3 |                  33.333 |
+| ('gpt-5.6-luna', 'embarrassment_mid_name', 'Embarrassment', 'character_name', 1, 1)          |            0.333 |            1     |        3 |        3 |                 -66.667 |
+| ('gpt-5.6-luna', 'fear_mid_desc', 'Fear', 'emotion_description', 1, 1)                       |            0.667 |            1     |        3 |        3 |                 -33.333 |
+| ('gpt-5.6-luna', 'fear_mid_name', 'Fear', 'character_name', 1, 1)                            |            0.667 |            0.667 |        3 |        3 |                   0     |
+| ('gpt-5.6-luna', 'joy_mid_desc', 'Joy', 'emotion_description', 1, 1)                         |            0     |            0.667 |        3 |        3 |                 -66.667 |
+| ('gpt-5.6-luna', 'joy_mid_name', 'Joy', 'character_name', 1, 1)                              |            0.333 |            1     |        3 |        3 |                 -66.667 |
+| ('gpt-5.6-luna', 'neutral_generic', 'Neutral', 'control', 1, 1)                              |            0.667 |            0.333 |        3 |        3 |                  33.333 |
+| ('gpt-5.6-luna', 'sadness_mid_desc', 'Sadness', 'emotion_description', 1, 1)                 |            1     |            1     |        3 |        3 |                   0     |
+| ('gpt-5.6-luna', 'sadness_mid_name', 'Sadness', 'character_name', 1, 1)                      |            0.333 |            0.667 |        3 |        3 |                 -33.333 |
 
 ## 5. Cost (actual) and projection to the full design
 

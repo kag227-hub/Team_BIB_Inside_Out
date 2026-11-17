@@ -8,6 +8,7 @@ For each run folder in data/raw/ that contains raw_results.csv:
   2. code/build_dataset.py  raw EDSL results -> outputs/<run_id>_responses.csv
   3. code/poc_analyze.py    validity, matched pairs, sell rates, cost -> *_feasibility.md, *_rates.csv
   4. code/make_figures.py   headline table + figure -> *_summary_table.*, *_disposition_by_persona.png
+  5. code/cue_ablation.py   (cue-ablation runs only, audit A3) DE with/without each cue -> *_cue_ablation.*
 Then writes outputs/runs.json and regenerates the public dashboard export from
 the paid run identified by the committed export's run_id.
 
@@ -45,6 +46,8 @@ def main() -> None:
         print(f"[poc_analyze] wrote outputs/{run_id}_feasibility.md, _rates.csv, _cost_projection.csv")
         step("code/make_figures.py", run_id)
         manifest = json.loads((RAW_DIR / run_id / "manifest.json").read_text())
+        if manifest.get("design") == "cue_ablation":
+            step("code/cue_ablation.py", run_id)
         summary.append(dict(run_id=run_id, is_test=bool(manifest["is_test"]),
                             started_utc=manifest["started_utc"], models=manifest["models"],
                             n_observations=manifest["n_observations"]))

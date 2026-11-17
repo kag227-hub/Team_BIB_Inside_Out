@@ -33,6 +33,7 @@ streamlit run dashboard/app.py        # displays the saved public paid-pilot agg
 | 2. Build dataset | `code/build_dataset.py` | `data/raw/<run_id>/raw_results.csv` → `outputs/<run_id>_responses.csv` |
 | 3. Analyze | `code/poc_analyze.py` | → `*_feasibility.md`, `*_rates.csv`, `*_cost_projection.csv` |
 | 4. Table + figure | `code/make_figures.py` | → `*_summary_table.csv/.md`, `*_disposition_by_persona.png` |
+| 4b. Cue ablation (audit A3; ablation runs only) | `code/cue_ablation.py` | → `*_cue_ablation.csv/.md`: disposition effect with and without each demand cue |
 | 5. Dashboard | `dashboard/app.py` | `outputs/public_paid_pilot.json` (paid pilot aggregates only) |
 
 **Data and offline reproducibility.** The repository includes the paid run's saved EDSL Results CSV, rendered prompts, and manifest in `data/raw/poc_paid_20261025T012651Z/`. It contains 108 survey observations and 54 complete gain/loss pairs. `python run_all.py` rebuilds the paid dataset, analysis, table, figure, and `outputs/public_paid_pilot.json`, as well as the synthetic test run. The dashboard reads the regenerated paid export.
@@ -213,7 +214,7 @@ Before the final submission:
 The [self-audit](audits/01_self_audit.md) records the outstanding checks. Uncertainty intervals, manual review of model comments, and a frozen main-study analysis plan are still pending. Paid answers, prompts, and the recovered manifest are now committed for response-level verification. In the pilot, return magnitude varies with company and holding period, option order is fixed within each scenario, and the neutral control has a generic background. These factors limit comparisons across cells.
 
 
-- **Caricature and demand effects:** named fictional characters may produce stereotypes or familiar scripts. Description and neutral arms help assess sensitivity.
+- **Caricature and demand effects:** named fictional characters may produce stereotypes or familiar scripts. Description and neutral arms help assess sensitivity. Two prompt cues, the "past price moves say nothing about its future" sentence and EDSL's "Do not break character" instruction, are tested by switching them off (ANALYSIS_PLAN.md, S8; `python code/poc_run.py --ablation`). The word "fictional" stays and is a remaining cue.
 - **Training leakage:** models may know the disposition-effect literature even when companies are fictional. Hiding the hypotheses reduces explicit cues but cannot remove prior knowledge.
 - **Prompt sensitivity:** wording, question sequence, and option order may change the answer. Save them and report robustness results, including sign reversals.
 - **Limited external validity:** hypothetical LLM choices lack real money, consequences, and human emotional experience.

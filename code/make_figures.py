@@ -33,6 +33,10 @@ INK, MUTED, GRID = "#0b0b0b", "#52514e", "#e4e3df"
 
 def main(run_id: str) -> None:
     rates = pd.read_csv(OUTPUTS / f"{run_id}_rates.csv")
+    # The persona figure shows the standard prompt (both demand cues on). Cue-ablation cells are
+    # summarized separately by code/cue_ablation.py.
+    if {"cue_past_moves", "cue_system_line"} <= set(rates.columns):
+        rates = rates[rates.cue_past_moves.eq(1) & rates.cue_system_line.eq(1)]
     manifest = json.loads((OUTPUTS / f"{run_id}_manifest.json").read_text())
     is_test = bool(manifest["is_test"])
 

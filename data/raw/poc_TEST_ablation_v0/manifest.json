@@ -1,0 +1,47 @@
+{
+  "run_id": "poc_TEST_ablation_v0",
+  "is_test": true,
+  "started_utc": "2026-11-17T18:15:53.941557+00:00",
+  "n_observations": 48,
+  "models": [
+    "test"
+  ],
+  "edsl_version": "1.0.9",
+  "model_settings": [
+    {
+      "temperature": 0.5
+    }
+  ],
+  "option_seed": 331,
+  "cache_policy": "fresh in-memory cache; remote cache disabled",
+  "personas_file": "inputs/personas_poc.csv",
+  "scenarios_file": "inputs/scenarios_poc.csv",
+  "design": "cue_ablation",
+  "persona_ids": [
+    "embarrassment_mid_desc",
+    "neutral_generic"
+  ],
+  "cue_cells": [
+    {
+      "cue_past_moves": 1,
+      "cue_system_line": 1
+    },
+    {
+      "cue_past_moves": 0,
+      "cue_system_line": 1
+    },
+    {
+      "cue_past_moves": 1,
+      "cue_system_line": 0
+    },
+    {
+      "cue_past_moves": 0,
+      "cue_system_line": 0
+    }
+  ],
+  "input_sha256": {
+    "models_poc.csv": "e44e36af95aa6b3c4091182c0fa74398f67cff9d33b463c301cf1a4bfb867744",
+    "personas_poc.csv": "6b52e1e2f5081f689748b4dcfff09c12b09d5f8f4e6edda2ba36d50d4f9a68c9",
+    "scenarios_poc.csv": "d3eb792ab41900e2610b03d9401220b8dc27503584256c4d0d8748c3936bf712"
+  }
+}

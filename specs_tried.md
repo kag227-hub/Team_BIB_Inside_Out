@@ -30,3 +30,10 @@ The expanded eight-emotion, three-background, repeated/reworded experiment remai
 | ID | Date | Attempt | Outcome |
 |---|---|---|---|
 | PLAN-001 | 2026-11-17 | Froze the main-study analysis plan in `ANALYSIS_PLAN.md` v1.0 (instructor audit A2, self-audit F11): primary estimands P1 (neutral DE per model) and P2 (emotion minus background-matched neutral, per model); scenario-level sign-flip test and bootstrap; Holm within P1 (2) and P2 (16); sign-flip rule across wordings; validity and failure rules. | Written after viewing the paid pilot (disclosed in the plan, Section 0). No main-study data collected. |
+| PLAN-002 | 2026-11-17 | Added S8 demand-cue ablation to `ANALYSIS_PLAN.md` (v1.1; instructor audit A3, self-audit F6): 2 × 2 of the "past price moves say nothing" sentence × EDSL's "Do not break character" instruction, for the neutral control and Embarrassment (description arm). | Planned before main-study collection. Collector (`code/poc_run.py --ablation`) and analysis (`code/cue_ablation.py`) implemented. |
+
+## Demand-cue ablation (audit A3)
+
+| ID | Date | Attempt | Outcome |
+|---|---|---|---|
+| ABL-000 | 2026-11-17 | Free synthetic run `poc_TEST_ablation_v0`: `neutral_generic` + `embarrassment_mid_desc` × 3 paired scenarios × 4 cue cells, EDSL test model | 48 rows; 100% valid; 24/24 pairs; all effects 0 by construction. Rendered prompts checked: the system line appears only when `cue_system_line = 1` and the past-moves clause only when `cue_past_moves = 1`; option order is the same across cue cells. Standard (non-ablation) prompts and hashes are unchanged from `poc_TEST_v0`. Plumbing check only. |

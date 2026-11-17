@@ -2,6 +2,15 @@
   "primary_run": "poc_paid_20261025T012651Z",
   "runs": [
     {
+      "run_id": "poc_TEST_ablation_v0",
+      "is_test": true,
+      "started_utc": "2026-11-17T18:15:53.941557+00:00",
+      "models": [
+        "test"
+      ],
+      "n_observations": 48
+    },
+    {
       "run_id": "poc_TEST_v0",
       "is_test": true,
       "started_utc": "2026-11-14T22:17:49.546162+00:00",

@@ -1,0 +1,2 @@
+model_id,observations,total_cost_usd,cost_per_obs_usd,share_cached,mean_decision_input_tokens,mean_decision_output_tokens,mean_sell_rating_input_tokens,mean_sell_rating_output_tokens,proj_mvp_2000_usd,proj_arms_repeats_12000_usd,proj_full_36000_usd
+test,48,0.0,,0.0,1.0,1.0,1.0,1.0,,,

@@ -1,0 +1,9 @@
+model_id,persona_id,emotion,prompt_arm,cue_past_moves,cue_system_line,gain_sell_rate,loss_sell_rate,n_gain,n_loss,disposition_effect_pp
+test,embarrassment_mid_desc,Embarrassment,emotion_description,0,0,0.0,0.0,3,3,0.0
+test,embarrassment_mid_desc,Embarrassment,emotion_description,0,1,0.0,0.0,3,3,0.0
+test,embarrassment_mid_desc,Embarrassment,emotion_description,1,0,0.0,0.0,3,3,0.0
+test,embarrassment_mid_desc,Embarrassment,emotion_description,1,1,0.0,0.0,3,3,0.0
+test,neutral_generic,Neutral,control,0,0,0.0,0.0,3,3,0.0
+test,neutral_generic,Neutral,control,0,1,0.0,0.0,3,3,0.0
+test,neutral_generic,Neutral,control,1,0,0.0,0.0,3,3,0.0
+test,neutral_generic,Neutral,control,1,1,0.0,0.0,3,3,0.0
