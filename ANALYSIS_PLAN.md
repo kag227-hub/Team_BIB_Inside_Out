@@ -15,7 +15,7 @@ We wrote this plan **after** looking at the paid pilot `poc_paid_20261025T012651
 | GPT-5.6 Luna (27 pairs) | 0.556 | 0.778 | −22.2 pp |
 | Pooled (54 pairs) | | | −7.4 pp |
 
-Within Embarrassment, the character-name and description arms had opposite signs for both models. The emotion predictions in Section 3 are the ones in `Proposal.md` and `README.md`, written before the pilot; we have not changed them. The pilot is **not** pooled with the main study and is reported only as a pilot.
+Within Embarrassment, the character-name and description arms had opposite signs for both models. The emotion predictions in Section 3 are the ones in `PROPOSAL.md` and `README.md`, written before the pilot; we have not changed them. The pilot is **not** pooled with the main study and is reported only as a pilot.
 
 ## 1. Design the plan applies to
 
